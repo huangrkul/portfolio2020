@@ -1,6 +1,7 @@
 # Will Huang Portfolio 2020
 
 **Author**: Will Huang
+
 **Version**: 1.0.0
 
 ## Overview
