@@ -1,17 +1,28 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+const HtmlWebPackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
+
+// plugin configurations
 const htmlPlugin = new HtmlWebPackPlugin({
   template: "./public/index.html", 
   filename: "./index.html"
 });
+const cleanWebPack = new CleanWebpackPlugin();
+const miniCssWeb = new MiniCssExtractPlugin({
+  filename: '[name]-[hash].css',
+  chunkFilename: '[id].css'
+});
+
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: {
+    index: "./src/index.js"
+  },
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.resolve(__dirname, './dist'),
     filename: "[name].js"
   },
-  plugins: [htmlPlugin],
   module: {
     rules: [
       {
@@ -22,15 +33,7 @@ module.exports = {
         }
       },
       {
-        test: /\.html$/,
-        use: [
-          {
-            loader: "html-loader"
-          }
-        ]
-      },
-      {
-        test: /\.s?css$/,
+        test: /\.(sa|sc|c)ss$/,
         use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
@@ -40,5 +43,9 @@ module.exports = {
       }
     ]
   },
-  watch: true
+  plugins: [
+    htmlPlugin,
+    cleanWebPack,
+    miniCssWeb
+  ]
 };
