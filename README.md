@@ -9,15 +9,16 @@ My Portfolio that encompasses all the projects that I worked on in the past seve
 
 ## Setup
 - Please take a look at webpack-config.js and package.json for environment setup.
-- Please create your own .env file for PORT setup.
 - npm install (make sure all dependencies are installed)
-- npm run dev (dev environment)
-- npm start
+- npm start (development build)
+- npm run build (production build)
 
 ## Architecture
 - language: javascript, html, css
-- tools: Express, Dotenv, React, React-Dom, Babel, SASS/SCSS
+- tools: React, React-Dom, Babel, SASS/SCSS
 
 ## Change Log
+==1.0.1==
+- took out server.js in favor of webpack-dev-server package.
 ==1.0.0==
 - basic environment setup completed

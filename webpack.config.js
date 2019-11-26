@@ -6,7 +6,7 @@ const htmlPlugin = new HtmlWebPackPlugin({
 });
 
 module.exports = {
-  entry: "./src/app.js",
+  entry: "./src/index.js",
   output: {
     path: path.join(__dirname, 'dist'),
     filename: "[name].js"
@@ -22,6 +22,14 @@ module.exports = {
         }
       },
       {
+        test: /\.html$/,
+        use: [
+          {
+            loader: "html-loader"
+          }
+        ]
+      },
+      {
         test: /\.s?css$/,
         use: ['style-loader', 'css-loader', 'sass-loader']
       },
@@ -31,5 +39,6 @@ module.exports = {
         options: { name: '/assets/[name].[ext]' }
       }
     ]
-  }
+  },
+  watch: true
 };
