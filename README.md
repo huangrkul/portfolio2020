@@ -9,6 +9,7 @@ My Portfolio that encompasses all the projects that I worked on in the past seve
 
 ## Setup
 - Please take a look at webpack-config.js and package.json for environment setup.
+- Please create your own .env file for PORT setup.
 - npm install (make sure all dependencies are installed)
 - npm run dev (dev environment)
 - npm start
