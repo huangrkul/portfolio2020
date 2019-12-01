@@ -1,12 +1,28 @@
 import React from 'react';
+import HeaderBtn from './HeaderBtn';
 
-class Header extends React.Component {
+const headerBtns = [
+  {btnId: 'btnAbout'},
+  {btnId: 'btnProjects'},
+  {btnId: 'btnBanners'},
+  {btnId: 'btnDemo'},
+  {btnId: 'btnContact'},
+]
+
+export default class Header extends React.Component {
   render() {
     return (
-      <div>this is a header yay</div>
+      <header>
+        <div>this is logo</div>
+        <ul>
+          {headerBtns.map((btn, idx) => {
+            return (
+              <li key={idx}><HeaderBtn buttonId={btn.btnId}/></li>
+            )
+          })}
+        </ul>
+      </header>
     )
   }
 }
-
-export default Header;
 

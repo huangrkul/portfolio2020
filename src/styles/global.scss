@@ -1,0 +1,21 @@
+$site-yellow-lgt:   #e8b58b;
+$site-yellow:       #da8945;
+$site-black:        #111111;
+$title-font: 'Righteous', cursive;
+$base-font: 'Roboto', sans-serif;
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: $base-font;
+}
+
+body {
+  background-color: $site-black;
+}
+
+ul {
+  padding-left: 0px;
+  list-style-type: none;
+}

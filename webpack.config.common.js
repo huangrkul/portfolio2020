@@ -38,8 +38,11 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        loader: "file-loader",
-        options: { name: '/assets/[name].[ext]' }
+        loader: 'file-loader',
+        options: {
+          outputPath: 'assets',
+          name: '[name].[ext]'
+        },
       }
     ]
   },

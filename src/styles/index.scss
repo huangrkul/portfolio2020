@@ -1,6 +1,2 @@
-$header-color: white;
-
-body {
-  background-color: black;
-  color: $header-color;
-}
+@import 'global.scss';
+@import 'header.scss';
