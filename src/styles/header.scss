@@ -3,6 +3,7 @@ header {
   background-color: $site-yellow;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 header div:first-child {
@@ -22,6 +23,10 @@ header ul li {
   border: 0.5em solid $site-yellow-lgt;
   border-radius: 0.5em;
   background-color: $site-yellow-lgt;
+}
+
+.btn-init {
+  opacity: 0;
 }
 
 .btnAbout, .btnProjects, .btnBanners, .btnDemo, .btnContact {
@@ -56,26 +61,40 @@ header ul li {
   background-size: 2000%;
 }
 
-// sprite animations////////////////////////////////////
+// init animations /////////////////////////////////////
+.btn-show {
+  animation: btn-show 400ms ease-in forwards;
+  animation-delay: 500ms;
+}
+@keyframes btn-show {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(-6px);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 
+// sprite animations////////////////////////////////////
 .btnAbout-hover {
-  -webkit-animation-name: btnAbout-on;
-  -webkit-animation-duration: 500ms;
-  -webkit-animation-timing-function: steps(12, end);
-  -webkit-animation-fill-mode: forwards;
   animation-name: btnAbout-on;
   animation-duration: 500ms;
   animation-timing-function: steps(12, end);
   animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes btnAbout-on {
-  from {
-    background-position-x: 0%;
-  }
-  to {
-    background-position-x: -1200%;
-  }
 }
 @keyframes btnAbout-on {
   from {
@@ -87,23 +106,10 @@ header ul li {
 }
 
 .btnAbout-out {
-  -webkit-animation-name: btnAbout-after;
-  -webkit-animation-duration: 500ms;
-  -webkit-animation-timing-function: steps(9, end);
-  -webkit-animation-fill-mode: forwards;
   animation-name: btnAbout-after;
   animation-duration: 500ms;
   animation-timing-function: steps(9, end);
   animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes btnAbout-after {
-  from {
-    background-position-x: -1200%;
-  }
-  to {
-    background-position-x: -2100%;
-  }
 }
 @keyframes btnAbout-after {
   from {
@@ -115,25 +121,11 @@ header ul li {
 }
 
 .btnProjects-hover {
-  -webkit-animation-name: btnProjects-on;
-  -webkit-animation-duration: 400ms;
-  -webkit-animation-timing-function: steps(9, end);
-  -webkit-animation-fill-mode: forwards;
-  -webkit-animation-iteration-count: infinite;
   animation-name: btnProjects-on;
   animation-duration: 400ms;
   animation-timing-function: steps(9, end);
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes btnProjects-on {
-  from {
-    background-position-x: 0%;
-  }
-  to {
-    background-position-x: -900%;
-  }
 }
 @keyframes btnProjects-on {
   from {
@@ -145,25 +137,11 @@ header ul li {
 }
 
 .btnProjects-out {
-  -webkit-animation-name: btnProjects-after;
-  -webkit-animation-duration: 500ms;
-  -webkit-animation-timing-function: steps(9, end);
-  -webkit-animation-fill-mode: forwards;
-  -webkit-animation-iteration-count: 2;
   animation-name: btnProjects-after;
   animation-duration: 500ms;
   animation-timing-function: steps(9, end);
   animation-fill-mode: forwards;
   animation-iteration-count: 2;
-}
-
-@-webkit-keyframes btnProjects-after {
-  from {
-    background-position-x: -900%;
-  }
-  to {
-    background-position-x: 0%;
-  }
 }
 @keyframes btnProjects-after {
   from {
@@ -175,23 +153,10 @@ header ul li {
 }
 
 .btnBanners-hover {
-  -webkit-animation-name: btnBanners-on;
-  -webkit-animation-duration: 600ms;
-  -webkit-animation-timing-function: steps(15, end);
-  -webkit-animation-fill-mode: forwards;
   animation-name: btnBanners-on;
   animation-duration: 600ms;
   animation-timing-function: steps(15, end);
   animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes btnBanners-on {
-  from {
-    background-position-x: 0%;
-  }
-  to {
-    background-position-x: -1500%;
-  }
 }
 @keyframes btnBanners-on {
   from {
@@ -203,23 +168,10 @@ header ul li {
 }
 
 .btnBanners-out {
-  -webkit-animation-name: btnBanners-after;
-  -webkit-animation-duration: 600ms;
-  -webkit-animation-timing-function: steps(15, end);
-  -webkit-animation-fill-mode: forwards;
   animation-name: btnBanners-after;
   animation-duration: 600ms;
   animation-timing-function: steps(15, end);
   animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes btnBanners-after {
-  from {
-    background-position-x: -1500%;
-  }
-  to {
-    background-position-x: -3000%;
-  }
 }
 @keyframes btnBanners-after {
   from {
@@ -231,23 +183,10 @@ header ul li {
 }
 
 .btnDemo-hover {
-  -webkit-animation-name: btnDemo-on;
-  -webkit-animation-duration: 500ms;
-  -webkit-animation-timing-function: steps(11, end);
-  -webkit-animation-fill-mode: forwards;
   animation-name: btnDemo-on;
   animation-duration: 500ms;
   animation-timing-function: steps(11, end);
   animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes btnDemo-on {
-  from {
-    background-position-x: 0%;
-  }
-  to {
-    background-position-x: -1100%;
-  }
 }
 @keyframes btnDemo-on {
   from {
@@ -259,23 +198,10 @@ header ul li {
 }
 
 .btnDemo-out {
-  -webkit-animation-name: btnDemo-after;
-  -webkit-animation-duration: 500ms;
-  -webkit-animation-timing-function: steps(8, end);
-  -webkit-animation-fill-mode: forwards;
   animation-name: btnDemo-after;
   animation-duration: 500ms;
   animation-timing-function: steps(8, end);
   animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes btnDemo-after {
-  from {
-    background-position-x: -1100%;
-  }
-  to {
-    background-position-x: -1900%;
-  }
 }
 @keyframes btnDemo-after {
   from {
@@ -287,23 +213,10 @@ header ul li {
 }
 
 .btnContact-hover {
-  -webkit-animation-name: btnContact-on;
-  -webkit-animation-duration: 500ms;
-  -webkit-animation-timing-function: steps(10, end);
-  -webkit-animation-fill-mode: forwards;
   animation-name: btnContact-on;
   animation-duration: 500ms;
   animation-timing-function: steps(10, end);
   animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes btnContact-on {
-  from {
-    background-position-x: 0%;
-  }
-  to {
-    background-position-x: -1000%;
-  }
 }
 @keyframes btnContact-on {
   from {
@@ -315,23 +228,10 @@ header ul li {
 }
 
 .btnContact-out {
-  -webkit-animation-name: btnContact-after;
-  -webkit-animation-duration: 500ms;
-  -webkit-animation-timing-function: steps(10, end);
-  -webkit-animation-fill-mode: forwards;
   animation-name: btnContact-after;
   animation-duration: 500ms;
   animation-timing-function: steps(10, end);
   animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes btnContact-after {
-  from {
-    background-position-x: -1000%;
-  }
-  to {
-    background-position-x: -2000%;
-  }
 }
 @keyframes btnContact-after {
   from {

@@ -17,12 +17,21 @@ export default class Header extends React.Component {
         <ul>
           {headerBtns.map((btn, idx) => {
             return (
-              <li key={idx}><HeaderBtn buttonId={btn.btnId}/></li>
+              <li key={idx} className="btn-init"><HeaderBtn buttonId={btn.btnId}/></li>
             )
           })}
         </ul>
       </header>
     )
   }
+  componentDidMount() {
+    const menuLi = document.querySelectorAll('.btn-init');
+    menuLi.forEach((li, id) => {
+      setTimeout(() => {
+        li.classList.add('btn-show');
+      }, 300 + id * 60)
+    })
+  }
+
 }
 
