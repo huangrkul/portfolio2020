@@ -10,6 +10,16 @@ const headerBtns = [
 ]
 
 export default class Header extends React.Component {
+  
+  componentDidMount() {
+    const menuLi = document.querySelectorAll('.btn-init');
+    menuLi.forEach((li, id) => {
+      setTimeout(() => {
+        li.classList.add('btn-show');
+      }, 300 + id * 60)
+    })
+  }
+
   render() {
     return (
       <header>
@@ -23,14 +33,6 @@ export default class Header extends React.Component {
         </ul>
       </header>
     )
-  }
-  componentDidMount() {
-    const menuLi = document.querySelectorAll('.btn-init');
-    menuLi.forEach((li, id) => {
-      setTimeout(() => {
-        li.classList.add('btn-show');
-      }, 300 + id * 60)
-    })
   }
 
 }

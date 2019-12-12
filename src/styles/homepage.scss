@@ -1,0 +1,165 @@
+.homepage {
+  display: flex;
+  width: 60%;
+  margin: 6em auto;
+}
+
+.homepage > div:first-child, .homepage > div:last-child {
+  flex: 0 1 50%;
+}
+
+.logo-container, .title-container {
+  position: relative;
+}
+
+.logo-container {
+  height: 24vw;
+  margin-right: 1em;
+}
+
+.title-container {
+  top: 20%;
+}
+
+.logo-container img, .title-container div:last-child img {
+  position: absolute;
+  width: 100%;
+}
+
+.title-container div:first-child {
+  height: 6vw;
+  background-image: url('../../public/assets/homepage/title-will.png');
+  background-size: 100% 3000%;
+}
+
+.title-container div:last-child {
+  position: relative;
+  height: 7vw;
+  overflow: hidden;
+  margin-left: 1px;
+}
+
+// animation ///////////////////////////////
+
+.logo-animate {
+  animation-name: logo-animate;
+  animation-duration: 1200ms;
+  animation-timing-function: steps(29, end);
+  animation-fill-mode: forwards;
+}
+@keyframes logo-animate {
+  from {
+    background-position-y: 0%;
+  }
+  to {
+    background-position-y: -2900%;
+  }
+}
+
+.logo-enter {
+  animation: logo-enter 600ms ease-in forwards;
+}
+
+@keyframes logo-enter {
+  0% {
+    opacity: 0;
+    transform: scale(0.1, 0.1);
+  }
+  55% {
+    opacity: 1;
+    transform: scale(1.07, 1.07);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(0.95, 0.95);
+  }
+  85% {
+    opacity: 1;
+    transform: scale(1.02, 1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+
+.logo-enter-hero {
+  animation: logo-enter-hero 500ms ease-in forwards;
+}
+
+@keyframes logo-enter-hero {
+  0% {
+    opacity: 0;
+    transform: scale(0.1, 0.1);
+  }
+  55% {
+    opacity: 1;
+    transform: scale(1.1, 1.1);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(0.92, 0.92);
+  }
+  85% {
+    opacity: 1;
+    transform: scale(1.04, 1.04);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+
+.huang-inbtm {
+  animation: huang-inbtm 500ms ease-in forwards;
+}
+
+@keyframes huang-inbtm {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  55% {
+    opacity: 1;
+    transform: translateY(-5%);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(3%);
+  }
+  85% {
+    opacity: 1;
+    transform: translateY(-2%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.huang-intop {
+  animation: huang-intop 500ms ease-in forwards;
+}
+
+@keyframes huang-intop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  55% {
+    opacity: 1;
+    transform: translateY(5%);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(-3%);
+  }
+  85% {
+    opacity: 1;
+    transform: translateY(2%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
