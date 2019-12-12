@@ -7,19 +7,19 @@ header {
 }
 
 header div:first-child {
-  flex: 0 0 10%;
+  flex: 0 0 40%;
+  padding-left: 1em;
+  font-size: 3vw;
 }
 
 header ul {
-  flex: 0 0 90%;
+  flex: 0 0 60%;
   display: flex;
   justify-content: flex-end;
-  padding-right: 1em;
 }
 
 header ul li {
-  flex: 0 0 5%;
-  margin: 0.5em;
+  margin: 0.5em 1vw 0.5em 0;
   border: 0.5em solid $site-yellow-lgt;
   border-radius: 0.5em;
   background-color: $site-yellow-lgt;

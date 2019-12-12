@@ -23,7 +23,7 @@ export default class Header extends React.Component {
   render() {
     return (
       <header>
-        <div>this is logo</div>
+        <div className="title-font">WH Portfolio</div>
         <ul>
           {headerBtns.map((btn, idx) => {
             return (

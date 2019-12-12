@@ -13,11 +13,16 @@ $base-font: 'Roboto', sans-serif;
 
 body {
   background-color: $site-black;
+  color: white;
 }
 
 ul {
   padding-left: 0px;
   list-style-type: none;
+}
+
+.title-font {
+  font-family: $title-font;
 }
 
 .hide {

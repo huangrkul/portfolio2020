@@ -18,10 +18,10 @@
 }
 
 .title-container {
-  top: 20%;
+  top: 16%;
 }
 
-.logo-container img, .title-container div:last-child img {
+.logo-container img, .title-container div:nth-child(2) img {
   position: absolute;
   width: 100%;
 }
@@ -32,11 +32,17 @@
   background-size: 100% 3000%;
 }
 
-.title-container div:last-child {
+.title-container div:nth-child(2) {
   position: relative;
   height: 7vw;
   overflow: hidden;
   margin-left: 1px;
+}
+
+.title-seq {
+  margin-top: 1vw;
+  text-align: center;
+  font-size: 2vw;
 }
 
 // animation ///////////////////////////////
@@ -161,5 +167,35 @@
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+.title-seq-intop {
+  animation: title-seq-intop 300ms ease-out forwards;
+}
+
+@keyframes title-seq-intop {
+  0% {
+    opacity: 0;
+    transform: translateY(-80%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title-seq-outbtm {
+  animation: title-seq-outbtm 300ms ease-out forwards;
+}
+
+@keyframes title-seq-outbtm {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(80%);
   }
 }
