@@ -2,7 +2,6 @@ header {
   display: flex;
   background-color: $site-yellow;
   align-items: center;
-  justify-content: space-between;
   overflow: hidden;
 }
 
@@ -10,6 +9,20 @@ header div:first-child {
   flex: 0 0 40%;
   padding-left: 1em;
   font-size: 3vw;
+}
+
+header div:first-child span {
+  display: inline-block;
+  transition: all 300ms ease;
+  cursor: pointer;
+}
+
+header div:first-child span:hover {
+  transform: scale(1.05);
+}
+
+header div:first-child span:active {
+  color: #f1f1f1;
 }
 
 header ul {
@@ -23,6 +36,7 @@ header ul li {
   border: 0.5em solid $site-yellow-lgt;
   border-radius: 0.5em;
   background-color: $site-yellow-lgt;
+  cursor: pointer;
 }
 
 .btn-init {
@@ -33,7 +47,6 @@ header ul li {
   margin: auto;
   width: 3vw;
   height: 3vw;
-  cursor: pointer;
 }
 
 .btnAbout {

@@ -10,6 +10,9 @@ const headerBtns = [
 ]
 
 export default class Header extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   
   componentDidMount() {
     const menuLi = document.querySelectorAll('.btn-init');
@@ -23,11 +26,11 @@ export default class Header extends React.Component {
   render() {
     return (
       <header>
-        <div className="title-font">WH Portfolio</div>
+        <div><span className="title-font" onClick={() => {this.props.onNextPage('index')}}>WH Portfolio</span></div>
         <ul>
           {headerBtns.map((btn, idx) => {
             return (
-              <li key={idx} className="btn-init"><HeaderBtn buttonId={btn.btnId}/></li>
+              <li key={idx} className="btn-init" onClick={() => this.props.onNextPage(btn.btnId)}><HeaderBtn buttonId={btn.btnId}/></li>
             )
           })}
         </ul>
