@@ -5,6 +5,12 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = merge(common, {
   mode: 'development',
   devtool: 'inline-source-map',
+  devServer: {
+    // port: 3000,
+    proxy: {
+      '/weather': 'http://localhost:3000'
+    }
+  },
   module: {
     rules: [
       {

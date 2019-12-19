@@ -4,15 +4,13 @@ export default class HeaderBtn extends React.Component {
   constructor(props) {
     super(props);
     this.state = {hovering: false}
-    this.handleOver = this.handleOver.bind(this)
-    this.handleOut = this.handleOut.bind(this)
   }
 
-  handleOver() {
+  handleOver = () => {
     this.setState({hovering: true})
   }
 
-  handleOut() {
+  handleOut = () => {
     this.setState({hovering: false})
   }
 

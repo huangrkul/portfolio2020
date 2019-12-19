@@ -1,0 +1,40 @@
+.bio-dev-section > h3{
+  display:flex;
+  color:$site-black;
+  border-bottom: 2px solid $site-black;
+  overflow: hidden;
+  margin-bottom: 1em;
+}
+
+.bio-dev-section > h3 > div {
+  flex: 0 0 1%;
+}
+
+.dev-headline-seq1 {
+  animation: dev-headline-seq1 150ms ease-out forwards;
+}
+@keyframes dev-headline-seq1 {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.dev-headline-seq2 {
+  animation: dev-headline-seq2 150ms ease-out forwards;
+  animation-delay: 500ms;
+}
+@keyframes dev-headline-seq2 {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

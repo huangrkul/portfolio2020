@@ -1,0 +1,63 @@
+.about-page {
+  display: flex;
+  width: 60%;
+  height: 400px;
+  margin: 4em auto;
+  background-color: $site-brown-drk;
+  border: 1em solid $site-brown-drk;
+  border-radius: 1em;
+}
+
+.about-page > div:first-child {
+  flex: 0 0 60%;
+  padding: 1em;
+}
+
+.about-page > div:last-child {
+  flex: 0 0 40%;
+  padding: 1em;
+}
+
+.about-page > div section {
+  width: 100%;
+  background-color: $site-brown;
+  border: 1em solid $site-brown;
+  border-radius: 1em;
+}
+
+.skills-section {
+  padding: 1em;
+}
+
+.skills-section > div:first-child {
+  display: flex;
+  width: 100%;
+  text-align: center;
+}
+
+.skills-section > div:first-child > h2 {
+  flex: 0 0 50%;
+  padding: 0.2em;
+  background-color: $site-black;
+  border: 0.5em solid $site-black;
+  color: white;
+  cursor: pointer;
+}
+
+.dev-tab {
+  border-radius: 0.8em 0 0 0.8em;
+}
+
+.ani-tab {
+  border-radius: 0 0.8em 0.8em 0;
+}
+
+.skills-section > div:first-child > .active-tab {
+  background-color: white;
+  border-color: white;
+  color: $site-black;
+}
+
+.skills-section > div:last-child {
+  margin-top: 1em;
+}
