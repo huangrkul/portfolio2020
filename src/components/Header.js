@@ -2,12 +2,12 @@ import React from 'react';
 import HeaderBtn from './HeaderBtn';
 
 const headerBtns = [
-  {btnId: 'btnAbout'},
-  {btnId: 'btnProjects'},
-  {btnId: 'btnBanners'},
-  {btnId: 'btnDemo'},
-  {btnId: 'btnContact'},
-]
+  'btnAbout',
+  'btnProjects',
+  'btnBanners',
+  'btnDemo',
+  'btnContact',
+];
 
 export default class Header extends React.Component {
   constructor(props) {
@@ -30,7 +30,7 @@ export default class Header extends React.Component {
         <ul>
           {headerBtns.map((btn, idx) => {
             return (
-              <li key={idx} className="btn-init" onClick={() => this.props.onNextPage(btn.btnId)}><HeaderBtn buttonId={btn.btnId}/></li>
+              <li key={idx} className="btn-init" onClick={() => this.props.onNextPage(btn)}><HeaderBtn buttonId={btn}/></li>
             )
           })}
         </ul>

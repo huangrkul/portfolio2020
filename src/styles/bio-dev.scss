@@ -3,11 +3,16 @@
   color:$site-black;
   border-bottom: 2px solid $site-black;
   overflow: hidden;
+  font-size: 1.2vw;
   margin-bottom: 1em;
 }
 
 .bio-dev-section > h3 > div {
   flex: 0 0 1%;
+}
+
+.bio-dev-section > p {
+  margin-bottom: 1em;
 }
 
 .dev-headline-seq1 {

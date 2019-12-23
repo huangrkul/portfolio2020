@@ -3,8 +3,11 @@ $site-yellow:       #da8945;
 $site-brown:        #6d4523;
 $site-brown-drk:    #2c1b0e;
 $site-black:        #111111;
+$profile-warm:      #feffdd;
+$profile-cold:      #8f8fbb;
 $title-font: 'Righteous', cursive;
 $base-font: 'Roboto', sans-serif;
+
 
 *{
   padding: 0px;
@@ -16,6 +19,7 @@ $base-font: 'Roboto', sans-serif;
 body {
   background-color: $site-black;
   color: white;
+  font-size: 1vw;
 }
 
 ul {
@@ -29,4 +33,22 @@ ul {
 
 .hide {
   opacity: 0;
+}
+
+.blk {
+  color: $site-black;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+button {
+  width: 80%;
+  background-color: $site-brown-drk;
+  border: 0.2em solid $site-brown-drk;
+  border-radius: 0.5em;
+  padding: 0.3em;
+  color: white;
+  font-family: $title-font;
 }

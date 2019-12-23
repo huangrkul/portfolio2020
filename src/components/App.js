@@ -7,17 +7,16 @@ import About from './About';
 export default class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {nextPage: null};
+    this.state = {nextPage: null, weatherData: null};
   };
 
   componentDidMount() {
 
     axios.get('/weather')
       .then(res => {
-        console.log(res);
+        this.setState({weatherData: res.data})
+        console.log(this.state.weatherData);
       })
-
-    // axios.get(`https://api.darksky.net/forecast/${process.env.WEATHER_KEY}/47.6062,-122.332`
   }
 
 
@@ -33,7 +32,7 @@ export default class App extends React.Component {
         pageToRender = <Homepage />
         break;
       case 'btnAbout':
-        pageToRender = <About />
+        pageToRender = <About temp={this.state.weatherData.temp} bg={this.state.weatherData.bg} />
         break;
       default:
         pageToRender = <Homepage />
