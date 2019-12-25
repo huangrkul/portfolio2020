@@ -1,29 +1,41 @@
 import React from 'react';
+import { setAni } from '../js/snippets';
 
-export default class BioDev extends React.Component {
+let seqTimer;
+
+export default class SkillsDev extends React.Component {
   constructor(props) {
     super(props);
   }
 
   componentDidMount() {
-    const headline1 = document.querySelectorAll('.bio-dev-section > h3:first-of-type > div');
-    headline1.forEach((item, id) => {
-      setTimeout(() => {
-        item.classList.add('dev-headline-seq1');
-      }, id * 30)
-    }) 
+    setAni('.skills-dev-section',0,'dev-section-reveal');
 
-    const headline2 = document.querySelectorAll('.bio-dev-section > h3:last-of-type > div');
-    headline2.forEach((item, id) => {
-      setTimeout(() => {
-        item.classList.add('dev-headline-seq2');
-      }, id * 30)
-    }) 
+    seqTimer = setTimeout(() => {
+      const headline1 = document.querySelectorAll('.skills-dev-section > h3:first-of-type > div');
+      headline1.forEach((item, id) => {
+        setTimeout(() => {
+          item.classList.add('dev-headline-seq1');
+        }, id * 30)
+      }) 
+  
+      const headline2 = document.querySelectorAll('.skills-dev-section > h3:last-of-type > div');
+      headline2.forEach((item, id) => {
+        setTimeout(() => {
+          item.classList.add('dev-headline-seq2');
+        }, id * 30)
+      }) 
+    }, 300);
+
+  }
+
+  componentWillUnmount() {
+    clearInterval(seqTimer);
   }
 
   render() {
     return (
-      <section className="bio-dev-section">
+      <section className="skills-dev-section hide">
         <h3>
           {[...'EXPERT KNOWLEDGE'].map((char, idx) => {
             return(

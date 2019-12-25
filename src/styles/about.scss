@@ -25,6 +25,7 @@
 
 .skills-section {
   padding: 1em;
+  height: 100%;
 }
 
 .skills-section > div:first-child {
@@ -61,13 +62,45 @@
   margin-top: 1em;
 }
 
-.profile-bg img {
+.profile-image {
   width: 100%;
   vertical-align: bottom;
 }
 
-.profile-bg {
-  
+.profile-bg-day {
+  background-color: $bg-day;
+}
+
+.profile-bg-night {
+  background-color: $bg-night;
+}
+
+.profile-bg-dark {
+  background-color: $bg-rain;
+}
+
+.profile-bg-sun {
+  background-image: url('../../public/assets/profiles/profile-bg-sun.png');
+}
+
+.profile-bg-sun-cloudy {
+  background-image: url('../../public/assets/profiles/profile-bg-cloudy-sun.png');
+}
+
+.profile-bg-moon {
+  background-image: url('../../public/assets/profiles/profile-bg-moon.png');
+}
+
+.profile-bg-moon-cloudy {
+  background-image: url('../../public/assets/profiles/profile-bg-cloudy-moon.png');
+}
+
+.profile-bg-rain {
+  background-image: url('../../public/assets/profiles/profile-bg-rain.png');
+}
+
+.profile-bg-cloudy {
+  background-image: url('../../public/assets/profiles/profile-bg-cloudy.png');
 }
 
 .profile-section > ul {
@@ -102,10 +135,6 @@
   font-size: 1.8vw;
 }
 
-.profile-default-bg {
-  background-color: $profile-warm;
-}
-
 .bio-section {
   margin-top: 2em;
   padding: 1em;
@@ -116,4 +145,46 @@
 
 .bio-section p {
   padding-bottom: 1em;
+}
+
+// animation //////////////////////////////
+.fadein-top {
+  animation: fadein-top 500ms ease-out forwards;
+}
+@keyframes fadein-top {
+  0% {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.section-enter {
+  animation: section-enter 500ms forwards;
+}
+
+@keyframes section-enter {
+  0% {
+    opacity: 0;
+    transform: scale(0.8, 0.8);
+  }
+  55% {
+    opacity: 1;
+    transform: scale(1.04, 1.04);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(0.97, 0.97);
+  }
+  85% {
+    opacity: 1;
+    transform: scale(1.01, 1.01);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
 }

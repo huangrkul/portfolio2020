@@ -19,7 +19,6 @@ export default class App extends React.Component {
       })
   }
 
-
   onNextPage = (selected) => {
     this.setState({nextPage: selected});
   };
@@ -32,7 +31,7 @@ export default class App extends React.Component {
         pageToRender = <Homepage />
         break;
       case 'btnAbout':
-        pageToRender = <About temp={this.state.weatherData.temp} bg={this.state.weatherData.bg} />
+        pageToRender = <About weatherData={this.state.weatherData} />
         break;
       default:
         pageToRender = <Homepage />

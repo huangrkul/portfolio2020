@@ -1,4 +1,4 @@
-.bio-dev-section > h3{
+.skills-dev-section > h3{
   display:flex;
   color:$site-black;
   border-bottom: 2px solid $site-black;
@@ -7,12 +7,26 @@
   margin-bottom: 1em;
 }
 
-.bio-dev-section > h3 > div {
+.skills-dev-section > h3 > div {
   flex: 0 0 1%;
 }
 
-.bio-dev-section > p {
+.skills-dev-section > p {
   margin-bottom: 1em;
+}
+
+
+// animation //////////////////////////////
+.dev-section-reveal {
+  animation: dev-section-reveal 300ms ease-out forwards;
+}
+@keyframes dev-section-reveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .dev-headline-seq1 {

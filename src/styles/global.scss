@@ -1,10 +1,11 @@
 $site-yellow-lgt:   #e8b58b;
 $site-yellow:       #da8945;
-$site-brown:        #6d4523;
-$site-brown-drk:    #2c1b0e;
+$site-brown:        #774d29;
+$site-brown-drk:    #382313;
 $site-black:        #111111;
-$profile-warm:      #feffdd;
-$profile-cold:      #8f8fbb;
+$bg-day:            #c8fef8;
+$bg-night:          #0c253d;
+$bg-rain:           #7a93d3;
 $title-font: 'Righteous', cursive;
 $base-font: 'Roboto', sans-serif;
 
@@ -43,6 +44,10 @@ ul {
   font-weight: bold;
 }
 
+main {
+  overflow: hidden;
+}
+
 button {
   width: 80%;
   background-color: $site-brown-drk;
@@ -51,4 +56,10 @@ button {
   padding: 0.3em;
   color: white;
   font-family: $title-font;
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+button:hover {
+  opacity: 0.9;
 }
