@@ -1,4 +1,4 @@
-.skills-dev-section > h3{
+.skills-dev-section > h3, .skills-ani-section > h3{
   display:flex;
   color:$site-black;
   border-bottom: 2px solid $site-black;
@@ -7,11 +7,11 @@
   margin-bottom: 1em;
 }
 
-.skills-dev-section > h3 > div {
+.skills-dev-section > h3 > div, .skills-ani-section > h3 > div{
   flex: 0 0 1%;
 }
 
-.skills-dev-section > p {
+.skills-dev-section > p, .skills-ani-section > p {
   margin-bottom: 1em;
 }
 
@@ -30,7 +30,7 @@
 }
 
 .dev-headline-seq1 {
-  animation: dev-headline-seq1 150ms ease-out forwards;
+  animation: dev-headline-seq1 80ms ease-out forwards;
 }
 @keyframes dev-headline-seq1 {
   0% {
@@ -44,7 +44,7 @@
 }
 
 .dev-headline-seq2 {
-  animation: dev-headline-seq2 150ms ease-out forwards;
+  animation: dev-headline-seq2 80ms ease-out forwards;
   animation-delay: 500ms;
 }
 @keyframes dev-headline-seq2 {

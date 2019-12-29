@@ -1,0 +1,122 @@
+.profile-section {
+  overflow: hidden;
+}
+
+.profile-image {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.profile-bg-sun, .profile-bg-sun-cloudy, .profile-bg-moon, .profile-bg-moon-cloudy, .profile-bg-cloudy {
+  background-size: 100%;
+}
+
+.profile-bg-day {
+  background-color: $bg-day;
+}
+
+.profile-bg-night {
+  background-color: $bg-night;
+}
+
+.profile-bg-dark {
+  background-color: $bg-rain;
+}
+
+.profile-bg-gray {
+  background-color: $bg-snow;
+}
+
+.profile-bg-sun {
+  background-image: url('../../public/assets/profiles/profile-bg-sun.png');
+}
+
+.profile-bg-sun-cloudy {
+  background-image: url('../../public/assets/profiles/profile-bg-cloudy-sun.png');
+}
+
+.profile-bg-moon {
+  background-image: url('../../public/assets/profiles/profile-bg-moon.png');
+}
+
+.profile-bg-moon-cloudy {
+  background-image: url('../../public/assets/profiles/profile-bg-cloudy-moon.png');
+}
+
+.profile-bg-cloudy {
+  background-image: url('../../public/assets/profiles/profile-bg-cloudy.png');
+}
+
+.profile-bg-rain {
+  background-image: url('../../public/assets/profiles/profile-bg-rain.png');
+  background-size: 300%;
+  animation-name: profile-bg-rain;
+  animation-duration: 300ms;
+  animation-timing-function: steps(3, end);
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+@keyframes profile-bg-rain {
+  from {
+    background-position-x: 0%;
+  }
+  to {
+    background-position-x: -300%;
+  }
+}
+
+.profile-section > ul {
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1em;
+} 
+
+.profile-section > ul li {
+  flex: 0 0 50%;
+  font-family: $title-font;
+}
+
+.profile-section > ul li:first-child {
+  color: $site-black;
+  font-size: 1.2vw;
+}
+
+.profile-section > ul li:first-child span {
+  font-size: 1vw;
+}
+
+.profile-section > ul li:nth-child(2) {
+  margin-bottom: 0.5vw;
+}
+
+.profile-section > ul li:nth-child(3) {
+  color: $site-black;
+  font-size: 1.8vw;
+}
+
+.photo-box {
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  text-align: right;
+  background-image: url('../../public/assets/photo-will.jpg');
+  background-size: cover;
+  border: 1em solid $site-yellow;
+  transition: all 500ms ease-in-out;
+}
+
+.photo-close {
+  margin: 0.5vw;
+  width: 1.5vw;
+  font-size: 1vw;
+}
+
+.photo-hide {
+  top: -100%;
+}

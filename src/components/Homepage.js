@@ -1,5 +1,10 @@
 import React from 'react';
 import { setAni } from '../js/snippets';
+import logoWhite from '../../public/assets/homepage/logo-white.png';
+import logoCircle from '../../public/assets/homepage/logo-circle.png';
+import logo from '../../public/assets/homepage/logo.png';
+import titleHag from '../../public/assets/homepage/title-hag.png';
+import titleUn from '../../public/assets/homepage/title-un.png';
 
 let titleTimer;
 
@@ -52,17 +57,17 @@ export default class Homepage extends React.Component {
       <article className="homepage">
         <div>
           <section className="logo-container logo-enter-hero">
-            <img className="hide" src="../../public/assets/homepage/logo-white.png"/>
-            <img className="hide" src="../../public/assets/homepage/logo-circle.png"/>
-            <img className="hide" src="../../public/assets/homepage/logo.png"/>
+            <img className="hide" src={logoWhite} />
+            <img className="hide" src={logoCircle}/>
+            <img className="hide" src={logo}/>
           </section>
         </div>
         <div>
           <section className="title-container">
             <div></div>
             <div>
-              <img className="hide" src="../../public/assets/homepage/title-hag.png"/>
-              <img className="hide" src="../../public/assets/homepage/title-un.png"/>
+              <img className="hide" src={titleHag}/>
+              <img className="hide" src={titleUn}/>
             </div>
             <div className="title-seq hide"></div>
           </section>

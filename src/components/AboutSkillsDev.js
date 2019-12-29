@@ -3,7 +3,7 @@ import { setAni } from '../js/snippets';
 
 let seqTimer;
 
-export default class SkillsDev extends React.Component {
+export default class AboutSkillsDev extends React.Component {
   constructor(props) {
     super(props);
   }

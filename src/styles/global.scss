@@ -5,6 +5,7 @@ $site-brown-drk:    #382313;
 $site-black:        #111111;
 $bg-day:            #c8fef8;
 $bg-night:          #0c253d;
+$bg-snow:           #a3bdba;
 $bg-rain:           #7a93d3;
 $title-font: 'Righteous', cursive;
 $base-font: 'Roboto', sans-serif;
@@ -52,8 +53,8 @@ button {
   width: 80%;
   background-color: $site-brown-drk;
   border: 0.2em solid $site-brown-drk;
-  border-radius: 0.5em;
-  padding: 0.3em;
+  border-radius: 0.3vw;
+  padding: 0.2vw;
   color: white;
   font-family: $title-font;
   cursor: pointer;

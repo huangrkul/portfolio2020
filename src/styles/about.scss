@@ -1,3 +1,6 @@
+@import 'about-skills.scss';
+@import 'about-profile.scss';
+
 .about-page {
   display: flex;
   width: 60%;
@@ -62,79 +65,6 @@
   margin-top: 1em;
 }
 
-.profile-image {
-  width: 100%;
-  vertical-align: bottom;
-}
-
-.profile-bg-day {
-  background-color: $bg-day;
-}
-
-.profile-bg-night {
-  background-color: $bg-night;
-}
-
-.profile-bg-dark {
-  background-color: $bg-rain;
-}
-
-.profile-bg-sun {
-  background-image: url('../../public/assets/profiles/profile-bg-sun.png');
-}
-
-.profile-bg-sun-cloudy {
-  background-image: url('../../public/assets/profiles/profile-bg-cloudy-sun.png');
-}
-
-.profile-bg-moon {
-  background-image: url('../../public/assets/profiles/profile-bg-moon.png');
-}
-
-.profile-bg-moon-cloudy {
-  background-image: url('../../public/assets/profiles/profile-bg-cloudy-moon.png');
-}
-
-.profile-bg-rain {
-  background-image: url('../../public/assets/profiles/profile-bg-rain.png');
-}
-
-.profile-bg-cloudy {
-  background-image: url('../../public/assets/profiles/profile-bg-cloudy.png');
-}
-
-.profile-section > ul {
-  display: flex;
-  text-align: center;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 1em;
-} 
-
-.profile-section > ul li {
-  flex: 0 0 50%;
-  font-family: $title-font;
-}
-
-.profile-section > ul li:first-child {
-  color: $site-black;
-  font-size: 1.2vw;
-}
-
-.profile-section > ul li:first-child span {
-  font-size: 1vw;
-}
-
-.profile-section > ul li:nth-child(2) {
-  margin-bottom: 0.5vw;
-}
-
-.profile-section > ul li:nth-child(3) {
-  color: $site-black;
-  font-size: 1.8vw;
-}
-
 .bio-section {
   margin-top: 2em;
   padding: 1em;
@@ -145,6 +75,7 @@
 
 .bio-section p {
   padding-bottom: 1em;
+  font-size: 0.8vw;
 }
 
 // animation //////////////////////////////
@@ -171,20 +102,16 @@
     opacity: 0;
     transform: scale(0.8, 0.8);
   }
-  55% {
+  50% {
     opacity: 1;
     transform: scale(1.04, 1.04);
   }
-  70% {
+  75% {
     opacity: 1;
     transform: scale(0.97, 0.97);
   }
-  85% {
-    opacity: 1;
-    transform: scale(1.01, 1.01);
-  }
   100% {
     opacity: 1;
-    transform: scale(1, 1);
+    transform: scale(1.01, 1.01);
   }
 }

@@ -1,14 +1,10 @@
 import React from 'react';
-import SkillsDev from './SkillsDev';
-import SkillsAni from './SkillsAni';
+import AboutSkillsDev from './AboutSkillsDev';
+import AboutSkillsAni from './AboutSkillsAni';
+import AboutProfile from './AboutProfile';
 import { setAni } from '../js/snippets';
 
 let seqTimer;
-
-const urls = [
-  '../../public/assets/profiles/profile-warm.png',
-  '../../public/assets/profiles/profile-cold.png',
-];
 
 function initSequence() {
   setAni('.about-page',0,'fadein-top');
@@ -44,25 +40,18 @@ export default class About extends React.Component {
   }
 
   render() {
-    const weather = this.props.weatherData;
-    let profileURL = weather.temp > 50 ? urls[0] : urls[1];
     let skillsComp;
-    let profileBgColor;
-    let profileBg;
 
     switch(this.state.loadSkillsComp) {
       case 'dev':
-        skillsComp = <SkillsDev />;
+        skillsComp = <AboutSkillsDev />;
         break;
       case 'ani':
-        skillsComp = <SkillsAni />;
+        skillsComp = <AboutSkillsAni />;
         break;
       default:
         skillsComp = null;
     }
-
-    // switch(weather.bg){
-    // }
 
     return (
       <article className="about-page hide">
@@ -78,17 +67,7 @@ export default class About extends React.Component {
           </section>
         </div>
         <div>
-          <section className="profile-section hide">
-            <div className={`${profileBgColor} ${profileBg}`}>
-              <img className="profile-image" src={profileURL} />
-            </div>
-            <ul>
-              <li>Seattle<br/><span>({weather.summary})</span></li>
-              <li><button>Photo</button></li>
-              <li>{weather.temp}&#176;F</li>
-              <li><button>Resume</button></li>
-            </ul>
-          </section>
+          <AboutProfile weather={this.props} />
           <section className="bio-section hide">
             <p>
               My name is Will Huang.  I am a front-end driven full-stack web developer.  My background is in animation and I am very passionate in creating interactive and engaging web experience.

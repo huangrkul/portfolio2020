@@ -3,6 +3,7 @@ import axios from 'axios';
 import Header from './Header';
 import Homepage from './Homepage';
 import About from './About';
+import Projects from './Projects';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -32,6 +33,9 @@ export default class App extends React.Component {
         break;
       case 'btnAbout':
         pageToRender = <About weatherData={this.state.weatherData} />
+        break;
+      case 'btnProjects':
+        pageToRender = <Projects />
         break;
       default:
         pageToRender = <Homepage />
