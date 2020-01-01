@@ -4,29 +4,56 @@ import Header from './Header';
 import Homepage from './Homepage';
 import About from './About';
 import Projects from './Projects';
+import projectJson from '../js/projects';
+
+function Project(project) {
+  this.img = `./public/asseets/projects/${project.img}`;
+  this.title = project.title;
+  this.url = project.url;
+  this.github = project.github;
+  this.desc = project.desc;
+}
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {nextPage: null, weatherData: null};
+    this.state = {nextPage: null, weatherData: null, projectsArray: null};
   };
 
   componentDidMount() {
+    this.fetchWeatherData();
+    this.createProjectsArray();
+  }
 
-    axios.get('/weather')
+  fetchWeatherData() {
+    let weatherPath;
+    if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+      weatherPath = '/weather';
+    } else {
+      weatherPath = 'https://huangrkul-portfolio-backend.herokuapp.com/weather';
+    }
+
+    axios.get(weatherPath)
       .then(res => {
         this.setState({weatherData: res.data})
         console.log(this.state.weatherData);
       })
   }
 
+  createProjectsArray() {
+    let allProjects = projectJson.map((project) => {
+      let projectItem = new Project(project);
+      return projectItem;
+    });
+    this.setState({projectsArray: allProjects});
+  }
+  
   onNextPage = (selected) => {
     this.setState({nextPage: selected});
   };
-
+  
   render() {
     let pageToRender;
-
     switch(this.state.nextPage) {
       case 'index':
         pageToRender = <Homepage />
@@ -35,7 +62,7 @@ export default class App extends React.Component {
         pageToRender = <About weatherData={this.state.weatherData} />
         break;
       case 'btnProjects':
-        pageToRender = <Projects />
+        pageToRender = <Projects allProjects={this.state.projectsArray} />
         break;
       default:
         pageToRender = <Homepage />

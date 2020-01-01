@@ -17,11 +17,11 @@ const miniCssWeb = new MiniCssExtractPlugin({
 
 module.exports = {
   entry: {
-    index: "./src/index.js"
+    index: './src/index.js'
   },
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: "[name].js"
+    filename: '[name].js'
   },
   module: {
     rules: [
@@ -29,7 +29,7 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
+          loader: 'babel-loader'
         }
       },
       {
@@ -40,9 +40,9 @@ module.exports = {
         test: /\.(png|svg|jpg|gif)$/,
         loader: 'file-loader',
         options: {
-          outputPath: 'assets/',
-          name: '[name].[ext]'
-        },
+          name: '[path][name].[ext]',
+          contest: 'assets'
+        }
       }
     ]
   },

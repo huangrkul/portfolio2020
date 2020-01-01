@@ -1,0 +1,15 @@
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+  margin: 4em auto;
+}
+
+.projects-list > div {
+  flex: 0 0 30%;
+  text-align: center;
+}
+
+.projects-list > div > img {
+  width: 100%;
+}

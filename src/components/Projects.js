@@ -1,15 +1,7 @@
 import React from 'react';
-import projects from '../js/projects';
 import { setAni } from '../js/snippets';
 
 let seqTimer;
-
-function Project(img, url, git) {
-  this.img = img;
-  this.url = url;
-  this.git = git;
-}
-
 
 function initSequence() {
 }
@@ -22,7 +14,6 @@ export default class Projects extends React.Component {
 
   componentDidMount() {
     initSequence();
-    console.log(projects);
   }
 
   componentWillUnmount() {
@@ -30,8 +21,20 @@ export default class Projects extends React.Component {
   }
 
   render() {
+    console.log(this.props.allProjects);
+    let projects = this.props.allProjects;
     return (
       <article className="projects-page">
+        <section className="projects-list">
+          {projects.map(project => {
+            return(
+              <div>
+                <img src={project.img} />
+                <h2 className="title-font">{project.title}</h2>
+              </div>
+            )
+          })}
+        </section>
       </article>
     )
   }
