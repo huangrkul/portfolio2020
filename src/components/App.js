@@ -7,7 +7,7 @@ import Projects from './Projects';
 import projectJson from '../js/projects';
 
 function Project(project) {
-  this.img = `./public/asseets/projects/${project.img}`;
+  this.img = `./public/assets/projects/${project.img}`;
   this.title = project.title;
   this.url = project.url;
   this.github = project.github;

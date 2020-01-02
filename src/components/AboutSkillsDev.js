@@ -16,16 +16,16 @@ export default class AboutSkillsDev extends React.Component {
       headline1.forEach((item, id) => {
         setTimeout(() => {
           item.classList.add('dev-headline-seq1');
-        }, id * 30)
+        }, id * 15)
       }) 
   
       const headline2 = document.querySelectorAll('.skills-dev-section > h3:last-of-type > div');
       headline2.forEach((item, id) => {
         setTimeout(() => {
           item.classList.add('dev-headline-seq2');
-        }, id * 30)
+        }, id * 15)
       }) 
-    }, 300);
+    }, 200);
 
   }
 

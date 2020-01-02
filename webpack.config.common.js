@@ -40,8 +40,7 @@ module.exports = {
         test: /\.(png|svg|jpg|gif)$/,
         loader: 'file-loader',
         options: {
-          name: '[path][name].[ext]',
-          contest: 'assets'
+          name: '[path][name].[ext]'
         }
       }
     ]
