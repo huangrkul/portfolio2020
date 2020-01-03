@@ -80,6 +80,11 @@
   font-family: $title-font;
 }
 
+.profile-section > ul li button {
+  width: 80%;
+  font-size: 1vw;
+}
+
 .profile-section > ul li:first-child {
   color: $site-black;
   font-size: 1.2vw;

@@ -5,6 +5,9 @@ import Homepage from './Homepage';
 import About from './About';
 import Projects from './Projects';
 import projectJson from '../js/projects';
+import Banners from './Banners';
+import Demo from './Demo';
+import Footer from './Footer';
 
 function Project(project) {
   this.img = `./public/assets/projects/${project.img}`;
@@ -64,6 +67,12 @@ export default class App extends React.Component {
       case 'btnProjects':
         pageToRender = <Projects allProjects={this.state.projectsArray} />
         break;
+      case 'btnBanners':
+        pageToRender = <Banners />
+        break;
+      case 'btnDemo':
+        pageToRender = <Demo />
+        break;
       default:
         pageToRender = <Homepage />
     }
@@ -74,6 +83,7 @@ export default class App extends React.Component {
         <main>
           {pageToRender}
         </main>
+        <Footer />
       </div>
     );
   }

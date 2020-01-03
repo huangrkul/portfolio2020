@@ -23,8 +23,8 @@
 }
 
 .projects-list > div:hover {
-  background-color: $site-brown;
-  border: 1em solid $site-brown;
+  background-color: $site-yellow;
+  border: 1em solid $site-yellow;
   border-radius: 1em;
   color: $site-black;
 }
@@ -103,7 +103,8 @@
 }
 
 .projects-single .buttons button {
-  flex: 0 0 20%;
+  flex: 0 0 30%;
   font-size: 1.2vw;
   border-radius: 0.6em;
+  padding: 0.5vw;
 }

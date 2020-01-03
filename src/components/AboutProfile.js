@@ -80,10 +80,7 @@ export default class AboutProfile extends React.Component {
     timer = setInterval(() => {
       if(this.props.weather.weatherData !== null) {
         this.populate();
-        console.log("data ready");
         clearInterval(timer);
-      } else {
-        console.log("data not ready");
       }
     }, 500)
   }

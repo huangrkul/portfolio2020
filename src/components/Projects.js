@@ -72,8 +72,8 @@ export default class Projects extends React.Component {
             <img src={this.state.singleImg} />
             <p>{this.state.singleDesc}</p>
             <div className="buttons">
-              <button>Website</button>
-              <button>Github</button>
+              <a href={this.state.singleUrl} target="_blank"><button>Website</button></a>
+              <a href={this.state.singleGit} target="_blank"><button>Github</button></a>
             </div>
           </div>
         </section>
