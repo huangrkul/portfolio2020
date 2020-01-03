@@ -7,6 +7,7 @@ $bg-day:            #c8fef8;
 $bg-night:          #0c253d;
 $bg-snow:           #a3bdba;
 $bg-rain:           #7a93d3;
+$site-black-rgba:   rgba(17, 17, 17, 0.9);
 $title-font: 'Righteous', cursive;
 $base-font: 'Roboto', sans-serif;
 
@@ -87,6 +88,6 @@ button:hover {
   }
   100% {
     opacity: 1;
-    transform: scale(1.01, 1.01);
+    transform: scale(1.00, 1.00);
   }
 }

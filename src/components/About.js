@@ -50,7 +50,7 @@ export default class About extends React.Component {
         skillsComp = <AboutSkillsAni />;
         break;
       default:
-        skillsComp = null;
+        skillsComp = <AboutSkillsDev />;
     }
 
     return (

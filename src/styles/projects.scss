@@ -1,15 +1,14 @@
-@import 'projects-single.scss';
-
 .projects-page {
   position: relative;
+  width: 60%;
+  margin: 4em auto;
+  overflow: hidden;
 }
 
 .projects-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  width: 60%;
-  margin: 4em auto;
 }
 
 .projects-list > div {
@@ -20,6 +19,18 @@
   border-radius: 1em;
   margin-bottom: 1.5em;
   cursor: pointer;
+  transition: all 500ms ease;
+}
+
+.projects-list > div:hover {
+  background-color: $site-brown;
+  border: 1em solid $site-brown;
+  border-radius: 1em;
+  color: $site-black;
+}
+
+.projects-list > div > h3 {
+  margin-top: 0.5vw;
 }
 
 .projects-list > div:last-child {
@@ -27,7 +38,72 @@
   cursor: auto;
 }
 
-.projects-list > div > img {
+.projects-list > div > img, .projects-single > div > img {
   width: 100%;
 }
 
+.projects-single {
+  position: absolute;
+  left: 100%;
+  top: 0px;
+  background-color: $site-black-rgba;
+  border: 1em solid $site-black-rgba;
+  border-radius: 1em;
+  width: 100%;
+  height: 100%;
+  transition: all 500ms ease-in-out;
+}
+
+.projects-single > div {
+  width: 60%;
+  margin: 2vw auto;
+  background-color: $site-brown;
+  border: 1em solid $site-brown;
+  border-radius: 1em;
+  text-align: center;
+  padding: 1vw;
+}
+
+.projects-single-reveal {
+  left: 0px;
+}
+
+.projects-single .closeBtn {
+  text-align: right;
+}
+
+.projects-single .closeBtn > button {
+  width: 2vw;
+  height: 2vw;
+  font-size: 1vw;
+}
+
+.projects-single h2 {
+  background-color: $site-black;
+  border: 0.5em solid $site-black;
+  border-radius: 0.5em 0.5em 0 0;
+  margin: 0.5vw 0 0 0;
+}
+
+.projects-single img {
+  border: 0.5em solid $site-black;
+}
+
+.projects-single p {
+  background-color: $site-black;
+  border: 0.5em solid $site-black;
+  border-radius: 0 0 0.5em 0.5em;
+  padding: 1vw;
+}
+
+.projects-single .buttons {
+  margin: 1vw 0 0 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.projects-single .buttons button {
+  flex: 0 0 20%;
+  font-size: 1.2vw;
+  border-radius: 0.6em;
+}

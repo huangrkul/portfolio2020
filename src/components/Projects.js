@@ -1,13 +1,10 @@
 import React from 'react';
-import ProjectsSingle from './ProjectsSingle';
-import { setAni } from '../js/snippets';
 
 let seqTimer;
 
 function initSequence() {
   let divId = 0;
   const divList = document.querySelectorAll('.projects-list > div');
-  console.log(divList);
   seqTimer = setInterval(() => {
     if(divId < divList.length) {
       divList[divId].classList.add('section-enter');
@@ -21,7 +18,13 @@ function initSequence() {
 export default class Projects extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      singleImg: null, 
+      singleTitle: null, 
+      singleUrl: null,
+      singleGit: null,
+      singleDesc: null
+    };
   }
 
   componentDidMount() {
@@ -32,15 +35,29 @@ export default class Projects extends React.Component {
     clearInterval(seqTimer);
   }
 
+  openSingle(target) {
+    this.setState({
+      singleImg: target.img,
+      singleTitle: target.title,
+      singleUrl: target.url,
+      singleGit: target.github,
+      singleDesc: target.desc
+    });
+    document.querySelector('.projects-single').classList.toggle('projects-single-reveal');
+  }
+
+  closeSingle() {
+    document.querySelector('.projects-single').classList.toggle('projects-single-reveal');
+  }
+
   render() {
-    console.log(this.props.allProjects);
     let projects = this.props.allProjects;
     return (
       <article className="projects-page">
         <section className="projects-list">
-          {projects.map(project => {
+          {projects.map((project) => {
             return(
-              <div className="hide" key={project.title}>
+              <div onClick={() => this.openSingle(project)} className="hide" key={project.title}>
                 <img src={project.img} />
                 <h3 className="title-font">{project.title}</h3>
               </div>
@@ -49,7 +66,16 @@ export default class Projects extends React.Component {
           <div></div>
         </section>
         <section className="projects-single">
-          <ProjectsSingle />
+          <div>
+            <div className="title-font closeBtn"><button onClick={() => this.closeSingle()}>X</button></div>
+            <h2 className="title-font">{this.state.singleTitle}</h2>
+            <img src={this.state.singleImg} />
+            <p>{this.state.singleDesc}</p>
+            <div className="buttons">
+              <button>Website</button>
+              <button>Github</button>
+            </div>
+          </div>
         </section>
       </article>
     )
