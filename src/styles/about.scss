@@ -2,25 +2,29 @@
 @import 'about-profile.scss';
 
 .about-page {
-  display: flex;
   width: 60%;
   margin: 4em auto;
+}
+
+.about-content {
+  display: flex;
+  width: 100%;
   background-color: $site-brown-drk;
   border: 1em solid $site-brown-drk;
   border-radius: 1em;
 }
 
-.about-page > div:first-child {
+.about-content > div:first-child {
   flex: 0 0 60%;
   padding: 1em;
 }
 
-.about-page > div:last-child {
+.about-content > div:last-child {
   flex: 0 0 40%;
   padding: 1em;
 }
 
-.about-page > div section {
+.about-content > div section {
   background-color: $site-brown;
   border: 1em solid $site-brown;
   border-radius: 1em;
@@ -78,16 +82,16 @@
 }
 
 // animation //////////////////////////////
-.fadein-top {
-  animation: fadein-top 500ms ease-out forwards;
+.fadein-left {
+  animation: fadein-left 400ms ease-out forwards;
 }
-@keyframes fadein-top {
+@keyframes fadein-left {
   0% {
     opacity: 0;
-    transform: translateY(-200px);
+    transform: translateX(-200px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0px);
+    transform: translateX(0px);
   }
 }

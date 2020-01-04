@@ -1,19 +1,7 @@
 import React from 'react';
+import { setAni } from '../js/snippets';
 
 let seqTimer;
-
-function initSequence() {
-  let divId = 0;
-  const divList = document.querySelectorAll('.projects-list > div');
-  seqTimer = setInterval(() => {
-    if(divId < divList.length) {
-      divList[divId].classList.add('section-enter');
-      divId++;
-    } else {
-      clearInterval(seqTimer);
-    }
-  }, 50)
-}
 
 export default class Projects extends React.Component {
   constructor(props) {
@@ -28,7 +16,17 @@ export default class Projects extends React.Component {
   }
 
   componentDidMount() {
-    initSequence();
+    let divId = 0;
+    setAni('h1',0,'enter-bottom');
+    const divList = document.querySelectorAll('.projects-list > div');
+    seqTimer = setInterval(() => {
+      if(divId < divList.length) {
+        divList[divId].classList.add('section-enter');
+        divId++;
+      } else {
+        clearInterval(seqTimer);
+      }
+    }, 50)
   }
 
   componentWillUnmount() {
@@ -54,6 +52,7 @@ export default class Projects extends React.Component {
     let projects = this.props.allProjects;
     return (
       <article className="projects-page">
+        <h1 className="hide">WEB PROJECTS</h1>
         <section className="projects-list">
           {projects.map((project) => {
             return(

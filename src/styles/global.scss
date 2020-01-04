@@ -30,6 +30,13 @@ ul {
   list-style-type: none;
 }
 
+h1 {
+  text-align: center;
+  margin-bottom: 1.5vw;
+  font-family: $title-font;
+}
+
+
 .title-font {
   font-family: $title-font;
 }
@@ -89,5 +96,20 @@ button:hover {
   100% {
     opacity: 1;
     transform: scale(1.00, 1.00);
+  }
+}
+
+.enter-bottom {
+  animation: enter-bottom 300ms ease-out forwards;
+}
+
+@keyframes enter-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

@@ -1,8 +1,6 @@
 import React from 'react';
 import { setAni } from '../js/snippets';
 
-let seqTimer;
-
 export default class AboutSkillsDev extends React.Component {
   constructor(props) {
     super(props);
@@ -10,27 +8,19 @@ export default class AboutSkillsDev extends React.Component {
 
   componentDidMount() {
     setAni('.skills-dev-section',0,'dev-section-reveal');
+    const headline1 = document.querySelectorAll('.skills-dev-section > h3:first-of-type > div');
+    headline1.forEach((item, id) => {
+      setTimeout(() => {
+        item.classList.add('dev-headline-seq1');
+      }, id * 15)
+    }) 
 
-    seqTimer = setTimeout(() => {
-      const headline1 = document.querySelectorAll('.skills-dev-section > h3:first-of-type > div');
-      headline1.forEach((item, id) => {
-        setTimeout(() => {
-          item.classList.add('dev-headline-seq1');
-        }, id * 15)
-      }) 
-  
-      const headline2 = document.querySelectorAll('.skills-dev-section > h3:last-of-type > div');
-      headline2.forEach((item, id) => {
-        setTimeout(() => {
-          item.classList.add('dev-headline-seq2');
-        }, id * 15)
-      }) 
-    }, 200);
-
-  }
-
-  componentWillUnmount() {
-    clearInterval(seqTimer);
+    const headline2 = document.querySelectorAll('.skills-dev-section > h3:last-of-type > div');
+    headline2.forEach((item, id) => {
+      setTimeout(() => {
+        item.classList.add('dev-headline-seq2');
+      }, id * 15)
+    }) 
   }
 
   render() {

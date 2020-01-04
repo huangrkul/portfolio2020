@@ -4,15 +4,6 @@ import AboutSkillsAni from './AboutSkillsAni';
 import AboutProfile from './AboutProfile';
 import { setAni } from '../js/snippets';
 
-let seqTimer;
-
-function initSequence() {
-  setAni('.about-page',0,'fadein-top');
-  setAni('.profile-section',300,'section-enter');
-  setAni('.skills-section',450,'section-enter');
-  setAni('.bio-section',550,'section-enter');
-}
-
 export default class About extends React.Component {
   constructor(props) {
     super(props);
@@ -20,12 +11,11 @@ export default class About extends React.Component {
   }
 
   componentDidMount() {
-    initSequence();
-    seqTimer = setTimeout(() => {this.setState({loadSkillsComp: 'dev'})}, 1000);
-  }
-
-  componentWillUnmount() {
-    clearInterval(seqTimer);
+    setAni('h1',0,'enter-bottom');
+    setAni('.about-content',0,'fadein-left');
+    setAni('.profile-section',400,'section-enter');
+    setAni('.skills-section',500,'section-enter');
+    setAni('.bio-section',600,'section-enter');
   }
 
   switchSkill(target) {
@@ -54,31 +44,34 @@ export default class About extends React.Component {
     }
 
     return (
-      <article className="about-page hide">
-        <div>
-          <section className="skills-section hide">
-            <div>
-              <h2 onClick={() => this.switchSkill('dev')} className="dev-tab title-font active-tab">Developer</h2>
-              <h2 onClick={() => this.switchSkill('ani')} className="ani-tab title-font">Animator</h2>
-            </div>
-            <div>
-              {skillsComp}
-            </div>
-          </section>
-        </div>
-        <div>
-          <AboutProfile weather={this.props} />
-          <section className="bio-section hide">
-            <p>
-              My name is Will Huang.  I am a front-end driven full-stack web developer.  My background is in animation and I am very passionate in creating interactive and engaging web experience.
-            </p>  
-            <p>
-              I believe front-end development isn’t just using another layout template, but something much more.  It should be a work of art that reflects the developer’s creativity and technical innovation.
-            </p>
-            <p>
-              In that regard, I am confident this is what I can bring to any team.  I worked in advertising for seven years both as motion designer and front end web developer.  I can efficiently produce high quality deliverables that are interactive and engaging.
-            </p>
-          </section>
+      <article className="about-page">
+        <h1 className="hide">PROFILE</h1>
+        <div className="about-content hide">
+          <div>
+            <section className="skills-section hide">
+              <div>
+                <h2 onClick={() => this.switchSkill('dev')} className="dev-tab title-font active-tab">Developer</h2>
+                <h2 onClick={() => this.switchSkill('ani')} className="ani-tab title-font">Animator</h2>
+              </div>
+              <div>
+                {skillsComp}
+              </div>
+            </section>
+          </div>
+          <div>
+            <AboutProfile weather={this.props} />
+            <section className="bio-section hide">
+              <p>
+                My name is Will Huang.  I am a front-end driven full-stack web developer.  My background is in animation and I am very passionate in creating interactive and engaging web experience.
+              </p>  
+              <p>
+                I believe front-end development isn’t just using another layout template, but something much more.  It should be a work of art that reflects the developer’s creativity and technical innovation.
+              </p>
+              <p>
+                In that regard, I am confident this is what I can bring to any team.  I worked in advertising for seven years both as motion designer and front end web developer.  I can efficiently produce high quality deliverables that are interactive and engaging.
+              </p>
+            </section>
+          </div>
         </div>
       </article>
     )
