@@ -24,7 +24,7 @@ export default class AboutProfile extends React.Component {
   populate() {
 
     const weather = this.props.weather.weatherData;
-    let profile = weather.temp > 50 ? profileWarm : profileCold;
+    let profile = weather.temp > 65 ? profileWarm : profileCold;
     this.setState({profileURL: profile});
     this.setState({temp: weather.temp});
     this.setState({summary: weather.summary});

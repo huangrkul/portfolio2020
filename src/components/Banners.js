@@ -1,5 +1,9 @@
 import React from 'react';
 import { setAni } from '../js/snippets';
+import bannersJson from '../js/banners';
+import customsJson from '../js/customs';
+
+
 
 export default class Banners extends React.Component {
   constructor(props) {
@@ -8,6 +12,7 @@ export default class Banners extends React.Component {
 
   componentDidMount() {
     setAni('h1',0,'enter-bottom');
+    console.log(Object.keys(bannersJson[0].sizes));
   }
 
   componentWillUnmount() {
@@ -17,7 +22,17 @@ export default class Banners extends React.Component {
     return (
       <article className="banners-page">
         <h1 className="hide">DIGITAL BANNERS</h1>
-        <div className="banners-content"></div>
+        <div className="banners-content">
+          <section>
+            <label htmlFor="standards">Standards:</label>
+            <select id="standards">
+              <option value="2">Choose a campaign</option>
+            </select>
+          </section>
+          <section>
+            
+          </section>
+        </div>
       </article>
     )
   }

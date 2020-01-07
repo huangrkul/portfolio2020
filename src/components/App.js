@@ -9,6 +9,8 @@ import Banners from './Banners';
 import Demo from './Demo';
 import Footer from './Footer';
 
+const projectImgs = require.context ( '../../public/assets/projects', true, /\.jpg$/ );
+
 function Project(project) {
   this.img = `./public/assets/projects/${project.img}`;
   this.title = project.title;

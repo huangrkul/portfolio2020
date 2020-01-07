@@ -16,6 +16,8 @@ export default class About extends React.Component {
     setAni('.profile-section',400,'section-enter');
     setAni('.skills-section',500,'section-enter');
     setAni('.bio-section',600,'section-enter');
+    setAni('.dev-tab',1000,'bump');
+    setAni('.ani-tab',1100,'bump');
   }
 
   switchSkill(target) {

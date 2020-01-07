@@ -52,10 +52,12 @@
 
 .dev-tab {
   border-radius: 0.8em 0 0 0.8em;
+  transform-origin: right;
 }
 
 .ani-tab {
   border-radius: 0 0.8em 0.8em 0;
+  transform-origin: left;
 }
 
 .skills-section > div:first-child > .active-tab {
@@ -93,5 +95,29 @@
   100% {
     opacity: 1;
     transform: translateX(0px);
+  }
+}
+
+.bump {
+  animation: bump 500ms ease-out forwards;
+}
+@keyframes bump {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.05);
+  }
+  60% {
+    transform: scale(0.97);
+  }
+  80% {
+    transform: scale(1.01);
+  }
+  100% {
+    transform: scale(1);
   }
 }

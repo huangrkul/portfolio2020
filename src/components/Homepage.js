@@ -40,8 +40,8 @@ export default class Homepage extends React.Component {
     setAni('.logo-container img:nth-child(2)', 300, 'logo-enter');
     setAni('.logo-container img:last-child', 600, 'logo-enter-hero');
     setAni('.title-container div:first-child', 1000, 'logo-animate');
-    setAni('.title-container div:nth-child(2) img:first-child', 2000, 'huang-inbtm');
-    setAni('.title-container div:nth-child(2) img:last-child', 2000, 'huang-intop');
+    setAni('.title-container div:nth-child(2) img:first-child', 1800, 'huang-inbtm');
+    setAni('.title-container div:nth-child(2) img:last-child', 1800, 'huang-intop');
     setTimeout(() => {this.titleSequence()},2500);
   }
 

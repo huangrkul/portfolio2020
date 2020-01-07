@@ -14,8 +14,8 @@
 .projects-list > div {
   flex: 0 0 30%;
   text-align: center;
-  background-color: $site-brown-drk;
-  border: 1em solid $site-brown-drk;
+  background-color: $site-brown;
+  border: 1em solid $site-brown;
   border-radius: 1em;
   margin-bottom: 1.5em;
   cursor: pointer;
@@ -23,8 +23,8 @@
 }
 
 .projects-list > div:hover {
-  background-color: $site-brown;
-  border: 1em solid $site-brown;
+  background-color: $site-yellow;
+  border: 1em solid $site-yellow;
   border-radius: 1em;
   color: $site-black;
 }
@@ -40,6 +40,7 @@
 
 .projects-list > div > img, .projects-single > div > img {
   width: 100%;
+  border: 0.5em solid $site-black;
 }
 
 .projects-single {
@@ -83,10 +84,6 @@
   border: 0.5em solid $site-black;
   border-radius: 0.5em 0.5em 0 0;
   margin: 0.5vw 0 0 0;
-}
-
-.projects-single img {
-  border: 0.5em solid $site-black;
 }
 
 .projects-single p {

@@ -1,0 +1,93 @@
+[
+  {
+    "title": "T-Mobile - Blizzcon '16'17",
+    "short": "TMO-Blizzcon",
+    "sizes": {
+      "300x250": "http://willhuanganimator.com/media/Blizzcon/Blizzcon_300x250/index.html",
+      "970x250": "http://willhuanganimator.com/media/Blizzcon/Blizzcon_970x250/index.html",
+      "970x500": "http://willhuanganimator.com/media/Blizzcon/Blizzcon_970x500/index.html"
+    }
+  },
+  {
+    "title": "T-Mobile - Holiday 2018",
+    "short": "TMO-Holiday",
+    "sizes": {
+      "300x250": "http://willhuanganimator.com/media/TMO_Holiday/TMO_Holiday_2018_300x250/index.html",
+      "Alt1": "http://willhuanganimator.com/media/TMO_Holiday/TMO_Holiday_Alt1/index.html",
+      "Alt2": "http://willhuanganimator.com/media/TMO_Holiday/TMO_Holiday_Alt2/index.html",
+      "Alt3": "http://willhuanganimator.com/media/TMO_Holiday/TMO_Holiday_Alt3/index.html",
+      "Alt4": "http://willhuanganimator.com/media/TMO_Holiday/TMO_Holiday_Alt4/index.html"
+    }
+  },
+  {
+    "title": "T-Mobile - Apple AB Test",
+    "short": "TMO-AppleTesting",
+    "sizes": {
+      "300x250": "http://willhuanganimtor.com/media/TMO_AppleTesting/Q418-TMO-168_Apple-Testing_OnUs_BATTERY_CUSTOM_H5_EL_300x250/index.html",
+      "160x600": "http://willhuanganimtor.com/media/TMO_AppleTesting/Q418-TMO-168_Apple-Testing_OnUs_BATTERY_CUSTOM_H5_EL_160x600/index.html",
+      "300x600": "http://willhuanganimtor.com/media/TMO_AppleTesting/Q418-TMO-168_Apple-Testing_OnUs_BATTERY_CUSTOM_H5_EL_300x600/index.html",
+      "728x90": "http://willhuanganimtor.com/media/TMO_AppleTesting/Q418-TMO-168_Apple-Testing_OnUs_BATTERY_CUSTOM_H5_EL_728x90/index.html"
+    }
+  },
+  {
+    "title": "T-Mobile - Live Nation (Khalifa)",
+    "short": "TMO-LiveNation",
+    "sizes": {
+      "300x250": "http://willhuanganimtor.com/media/TMO_Livenation/Q318-TMO-137_300x250_Live-Nation_Khalifa_H5/index.html",
+      "160x600": "http://willhuanganimtor.com/media/TMO_Livenation/Q318-TMO-137_160x600_Live-Nation_Khalifa_H5/index.html",
+      "728x90": "http://willhuanganimtor.com/media/TMO_Livenation/Q318-TMO-137_728x90_Live-Nation_Khalifa_H5/index.html"
+    }
+  },
+  {
+    "title": "T-Mobile - MLB",
+    "short": "TMO-MLB",
+    "sizes": {
+      "300x250": "http://willhuanganimtor.com/media/MLB/Q317-TMO-284_300x250_MLB_RegSeason2_National_Bryce_H5/index.html",
+      "160x600": "http://willhuanganimtor.com/media/MLB/Q317-TMO-284_160x600_MLB_RegSeason2_National_Bryce_H5/index.html",
+      "300x600": "http://willhuanganimtor.com/media/MLB/Q317-TMO-284_300x600_MLB_RegSeason2_National_Bryce_H5/index.html",
+      "728x90": "http://willhuanganimtor.com/media/MLB/Q317-TMO-284_728x90_MLB_RegSeason2_National_Bryce_H5/index.html"
+    }
+  },
+  {
+    "title": "LensCrafters - Every Purpose",
+    "short": "Lens-EveryPurpose",
+    "sizes": {
+      "300x250": "http://willhuanganimtor.com/media/EveryPurpose/300x250_EveryPurpose/index.html",
+      "160x600": "http://willhuanganimtor.com/media/EveryPurpose/160x600_EveryPurpose/index.html",
+      "300x600": "http://willhuanganimtor.com/media/EveryPurpose/300x600_EveryPurpose/index.html",
+      "728x90": "http://willhuanganimtor.com/media/EveryPurpose/728x90_EveryPurpose/index.html"
+    }
+  },
+  {
+    "title": "Aflac - Open Enrollment",
+    "short": "Aflac-Enrollment",
+    "sizes": {
+      "300x250": "http://willhuanganimtor.com/media/Aflac/q117_afl_013_300x250_h5/index.html",
+      "160x600": "http://willhuanganimtor.com/media/Aflac/q117_afl_013_160x600_h5/index.html",
+      "300x600": "http://willhuanganimtor.com/media/Aflac/q117_afl_013_300x600_h5/index.html",
+      "728x90": "http://willhuanganimtor.com/media/Aflac/q117_afl_013_728x90_h5/index.html"
+    }
+  },
+  {
+    "title": "Devour - Frozen Meals",
+    "short": "Devour-FrozenMeals",
+    "sizes": {
+      "300x250": "http://willhuanganimtor.com/media/Devour/cheddar_300x250/index.html",
+      "160x600": "http://willhuanganimtor.com/media/Devour/cheddar_160x600/index.html",
+      "300x600": "http://willhuanganimtor.com/media/Devour/cheddar_300x600/index.html",
+      "728x90": "http://willhuanganimtor.com/media/Devour/cheddar_728x90/index.html",
+      "640x480": "http://willhuanganimtor.com/media/Devour/cheddar_640x480/index.html",
+      "970x250": "http://willhuanganimtor.com/media/Devour/cheddar_970x250/index.html"
+    }
+  },
+  {
+    "title": "VisitSeattle - First Takes",
+    "short": "VS-FirstTakes",
+    "sizes": {
+      "300x250": "http://willhuanganimtor.com/media/VisitSeattle/first_300x250/index.html",
+      "160x600": "http://willhuanganimtor.com/media/VisitSeattle/first_160x600/index.html",
+      "300x600": "http://willhuanganimtor.com/media/VisitSeattle/first_300x600/index.html",
+      "728x90": "http://willhuanganimtor.com/media/VisitSeattle/first_728x90/index.html"
+    }
+  }
+]
