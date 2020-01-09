@@ -1,34 +1,50 @@
 [
   {
-    "title": "T-Mobile - Blizzcon Homepage Takeover '05 (IGN)",
-    "url": "http://willhuanganimtor.com/media/Customs/IGN_BigBang05/index.html"
+    "title": "Blizzcon Homepage Takeover '05 (IGN)",
+    "url": "http://willhuanganimator.com/media/Customs/IGN_BigBang05/index.html",
+    "width": 970,
+    "height": 860
   },
   {
-    "title": "T-Mobile - Blizzcon Homepage Takeover '06 (IGN)",
-    "url": "http://willhuanganimtor.com/media/Customs/IGN_BigBang06/index.html"
+    "title": "Blizzcon Homepage Takeover '06 (IGN)",
+    "url": "http://willhuanganimator.com/media/Customs/IGN_BigBang06/index.html",
+    "width": 974,
+    "height": 860
   },
   {
-    "title": "T-Mobile - Blizzcon Pushdown Expandable (Curse)",
-    "url": "http://willhuanganimtor.com/media/Customs/Curse_User/index.html"
+    "title": "Blizzcon Pushdown Expandable (Curse)",
+    "url": "http://willhuanganimator.com/media/Customs/Curse_User/index.html",
+    "width": 980,
+    "height": 350
   },
   {
-    "title": "T-Mobile - Blizzcon In-Banner Video (Curse)",
-    "url": "http://willhuanganimtor.com/media/Customs/Curse_Rotational/index.html"
+    "title": "Blizzcon In-Banner Video (Curse)",
+    "url": "http://willhuanganimator.com/media/Customs/Curse_Rotational/index.html",
+    "width": 980,
+    "height": 250
   },
   {
-    "title": "T-Mobile - Holiday '07 Masthead (PrecisionASG)",
-    "url": "http://willhuanganimtor.com/media/Customs/PrecisionASG_Holiday_masthead/index.html"
+    "title": "Holiday '07 Masthead (PrecisionASG)",
+    "url": "http://willhuanganimator.com/media/Customs/PrecisionASG_Holiday_masthead/index.html",
+    "width": 970,
+    "height": 250
   },
   {
-    "title": "T-Mobile - Holiday '07 Expandable (CNET)",
-    "url": "http://willhuanganimtor.com/media/Customs/CNET_Holiday_Expandable/index.html"
+    "title": "Holiday '07 Expandable (CNET)",
+    "url": "http://willhuanganimator.com/media/Customs/CNET_Holiday_Expandable/index.html",
+    "width": 320,
+    "height": 480
   },
   {
-    "title": "T-Mobile - Live Nation Expandable",
-    "url": "http://willhuanganimtor.com/media/Customs/LiveNation_Discount_Pushdown/index.html"
+    "title": "Live Nation Expandable",
+    "url": "http://willhuanganimator.com/media/Customs/LiveNation_Discount_Pushdown/index.html",
+    "width": 970,
+    "height": 418
   },
   {
-    "title": "T-Mobile - Switch Now Pushdown Expandable (FLoSports)",
-    "url": "http://willhuanganimtor.com/media/Customs/FloSports_TMO1/index.html"
+    "title": "Switch Now Pushdown Expandable",
+    "url": "http://willhuanganimator.com/media/Customs/FloSports_TMO1/index.html",
+    "width": 970,
+    "height": 300
   }
 ]

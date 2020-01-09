@@ -12,6 +12,7 @@
   background-color: $site-brown-drk;
   border: 1em solid $site-brown-drk;
   border-radius: 1em;
+  overflow: hidden;
 }
 
 .about-content > div:first-child {
@@ -95,6 +96,34 @@
   100% {
     opacity: 1;
     transform: translateX(0px);
+  }
+}
+
+.fadein-bottom {
+  animation: fadein-bottom 400ms ease-out forwards;
+}
+@keyframes fadein-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.fadein-top {
+  animation: fadein-top 400ms ease-out forwards;
+}
+@keyframes fadein-top {
+  0% {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
 

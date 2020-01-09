@@ -4,7 +4,7 @@
 }
 
 .banners-content {
-  display: flex;
+  padding: 1em;
   width: 100%;
   background-color: $site-brown-drk;
   border: 1em solid $site-brown-drk;
@@ -12,9 +12,110 @@
 }
 
 .banners-content > section:first-child {
-  flex: 0 0 20%;
+  display: flex;
+  text-align: center;
+  overflow: hidden;
+}
+
+.banners-content > section:first-child > div:first-child,
+.banners-content > section:first-child > div:last-child
+{
+  flex: 0 0 50%;
 }
 
 .banners-content > section:last-child {
-  flex: 0 0 80%;
+  margin-top: 1vw;
+  width: 100%;
+  background-color: $site-brown-lgt;
+  border: 1em solid $site-brown-lgt;
+  border-radius: 1em;
+  padding: 1em;
+}
+
+.banners-content label {
+  font-size: 1.5vw;
+  vertical-align: middle;
+  margin-right: 1em;
+}
+
+.banners-content select {
+  background-color: $site-yellow-lgt;
+  border: 1em solid $site-yellow-lgt;
+  border-radius: 1em;
+  font-size: 0.7vw;
+  font-family: $base-font;
+}
+
+.banners-content .heading {
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banners-content aside {
+  display: flex;
+}
+
+.banners-content aside button {
+  margin-left: 1em;
+}
+
+.banners-content .iframe-box {
+  background-color: $site-brown;
+  border: 1em solid $site-brown;
+  border-radius: 1em;
+  min-height: 20vw;
+  text-align: center;
+  transform-origin: top;
+}
+
+.iframe-box div:first-child {
+  color: $site-black;
+}
+
+.iframe-box iframe {
+  border: 0;
+}
+
+// animation ///////////////////////////////
+
+.scale-x-reveal {
+  animation: scale-x-reveal 400ms ease-in-out forwards;
+}
+@keyframes scale-x-reveal {
+  0% {
+    opacity: 0;
+    transform: scale(0,0.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1,0.1);
+  }
+}
+
+.scale-y-reveal {
+  animation: scale-y-reveal 400ms ease-in-out forwards;
+}
+@keyframes scale-y-reveal {
+  0% {
+    opacity: 1;
+    transform: scale(1,0.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1,1);
+  }
+}
+
+.reveal {
+  animation: reveal 300ms ease-out forwards;
+}
+@keyframes reveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

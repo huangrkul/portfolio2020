@@ -13,9 +13,9 @@ export default class About extends React.Component {
   componentDidMount() {
     setAni('h1',0,'enter-bottom');
     setAni('.about-content',0,'fadein-left');
-    setAni('.profile-section',400,'section-enter');
-    setAni('.skills-section',500,'section-enter');
-    setAni('.bio-section',600,'section-enter');
+    setAni('.skills-section',300,'fadein-left');
+    setAni('.bio-section',400,'fadein-bottom');
+    setAni('.profile-section',500,'fadein-top');
     setAni('.dev-tab',1000,'bump');
     setAni('.ani-tab',1100,'bump');
   }
