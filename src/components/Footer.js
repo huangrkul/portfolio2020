@@ -13,7 +13,8 @@ export default class Footer extends React.Component {
 
   render() {
     return (
-      <article className="demos-page">
+      <article className="footer">
+        <h5>Willam Huang &copy;2020</h5>
       </article>
     )
   }

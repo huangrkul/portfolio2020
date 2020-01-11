@@ -7,7 +7,8 @@ import Projects from './Projects';
 import projectJson from '../js/projects';
 import Banners from './Banners';
 import Demo from './Demo';
-import Footer from './Footer';
+import Contact from './Contact';
+// import Footer from './Footer';
 
 const projectImgs = require.context ( '../../public/assets/projects', true, /\.jpg$/ );
 
@@ -75,6 +76,9 @@ export default class App extends React.Component {
       case 'btnDemo':
         pageToRender = <Demo />
         break;
+      case 'btnContact':
+        pageToRender = <Contact />
+        break;
       default:
         pageToRender = <Homepage />
     }
@@ -85,7 +89,7 @@ export default class App extends React.Component {
         <main>
           {pageToRender}
         </main>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     );
   }

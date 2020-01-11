@@ -1,7 +1,8 @@
 .homepage {
   display: flex;
   width: 60%;
-  margin: 6em auto;
+  margin: 10em auto;
+  flex-wrap: wrap;
 }
 
 .homepage > div:first-child, .homepage > div:last-child {
@@ -43,6 +44,39 @@
   margin-top: 1vw;
   text-align: center;
   font-size: 2vw;
+}
+
+@media (max-width: 1200px) {
+  .homepage {
+    margin: 12em auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .homepage {
+    margin: 14em auto;
+  }
+  .homepage > div:first-child, .homepage > div:last-child {
+    flex: 0 1 100%;
+  }
+  .homepage > div:first-child{
+    height: 50vw;
+  }
+  .title-container {
+    top: 0;
+    margin-top: 2vw;
+  }
+  .title-container div:first-child {
+    height: 12vw;
+  }
+  .title-container div:nth-child(2) {
+    height: 14vw;
+    margin-left: 0px;
+  }
+  .title-seq {
+    margin-top: 2vw;
+    font-size: 4vw;
+  }
 }
 
 // animation ///////////////////////////////

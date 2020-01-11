@@ -15,6 +15,12 @@
   margin-bottom: 1em;
 }
 
+@media (max-width: 1200px){
+  .skills-dev-section > h3, .skills-ani-section > h3{
+    font-size: 2vw;
+  }
+}
+
 
 // animation //////////////////////////////
 .dev-section-reveal {

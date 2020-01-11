@@ -1,0 +1,20 @@
+.demos-page {
+  width: 80%;
+}
+
+.demos-content {
+  margin-top: 4vw;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+
+}
+
+.demos-content > section {
+  flex: 0 0 40%;
+  height: 24vw;
+  background-color: $site-brown-drk;
+  border: 1em solid $site-brown-drk;
+  border-radius: 1em;
+  overflow: hidden;
+}

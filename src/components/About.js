@@ -7,7 +7,7 @@ import { setAni } from '../js/snippets';
 export default class About extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {loadSkillsComp: null};
+    this.state = {loadSkillsComp: 'dev'};
   }
 
   componentDidMount() {

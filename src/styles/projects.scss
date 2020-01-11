@@ -1,7 +1,6 @@
 .projects-page {
   position: relative;
   width: 60%;
-  margin: 4em auto;
   overflow: hidden;
 }
 
@@ -104,4 +103,27 @@
   font-size: 1.2vw;
   border-radius: 0.6em;
   padding: 0.5vw;
+}
+
+@media (max-width: 1200px) {
+  .projects-page {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-list > div {
+    flex: 0 0 40%;
+    margin-top: 1vw;
+  }
+  .projects-single > div {
+    width: 80%;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .projects-list > div {
+    flex: 0 0 80%;
+  }  
 }

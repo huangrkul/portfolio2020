@@ -76,6 +76,25 @@ button:hover {
   border: 0.2em solid #442c19;
 }
 
+.about-page, .projects-page, .banners-page, .demos-page, .contact-page {
+  margin: 8em auto;
+}
+
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 2.5vw;
+  }
+  p {
+    font-size: 1.5vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page, .projects-page, .banners-page, .demos-page, .contact-page {
+    margin: 10em auto;
+  }  
+}
+
 // global animation/////////////////////////L
 
 .section-enter {

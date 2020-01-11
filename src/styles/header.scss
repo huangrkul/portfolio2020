@@ -1,13 +1,17 @@
 header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
   display: flex;
   background-color: $site-yellow;
   align-items: center;
   overflow: hidden;
+  z-index: 9999;
 }
 
 header div:first-child {
-  flex: 0 0 40%;
-  padding-left: 1em;
+  flex: 0 0 50%;
+  padding-left: 1.5vw;
   font-size: 3vw;
 }
 
@@ -26,7 +30,7 @@ header div:first-child span:active {
 }
 
 header ul {
-  flex: 0 0 60%;
+  flex: 0 0 50%;
   display: flex;
   justify-content: flex-end;
 }
@@ -73,6 +77,37 @@ header ul li {
   background-image: url('../../public/assets/btn-sprites/btn-contact.png');
   background-size: 2000%;
 }
+
+@media (max-width: 1200px) {
+  header div:first-child {
+    font-size: 4vw;
+  }
+  .btnAbout, .btnProjects, .btnBanners, .btnDemo, .btnContact {
+    width: 4vw;
+    height: 4vw;
+  }
+}
+
+@media (max-width: 768px) {
+  header div:first-child {
+    font-size: 5vw;
+  }
+  .btnAbout, .btnProjects, .btnBanners, .btnDemo, .btnContact {
+    width: 5vw;
+    height: 5vw;
+  }
+}
+
+@media (max-width: 550px) {
+  header div:first-child {
+    font-size: 6vw;
+  }
+  .btnAbout, .btnProjects, .btnBanners, .btnDemo, .btnContact {
+    width: 6vw;
+    height: 6vw;
+  }
+}
+
 
 // init animations /////////////////////////////////////
 .btn-show {

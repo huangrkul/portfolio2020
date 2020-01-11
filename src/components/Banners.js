@@ -48,9 +48,6 @@ export default class Banners extends React.Component {
     setAni('.iframe-box',700,'scale-y-reveal');
     setAni('.iframe-box div:first-child',1200,'reveal');
   }
-  
-  componentWillUnmount() {
-  }
 
   bannerHandler(e) {
     let bannerData = this.state.bannersArray[e.target.value];

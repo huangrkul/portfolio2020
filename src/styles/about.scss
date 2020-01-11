@@ -3,7 +3,6 @@
 
 .about-page {
   width: 60%;
-  margin: 4em auto;
 }
 
 .about-content {
@@ -82,6 +81,43 @@
 .bio-section p {
   padding-bottom: 1em;
   font-size: 0.8vw;
+}
+
+@media (max-width: 1200px) {
+  .about-page {
+    width: 80%;
+  }
+  .about-content {
+    flex-wrap: wrap;
+  }
+  .about-content > div:first-child {
+    flex: 0 0 100%;
+    order: 2;
+  }
+  .about-content > div:last-child {
+    flex: 0 0 100%;
+    order: 1;
+    display: flex;
+    justify-content: space-between;
+  } 
+  .skills-section > div:first-child {
+    display: flex;
+    width: 60%;
+    text-align: center;
+    margin: auto;
+  }
+  .profile-section {
+    flex: 0 0 45%;
+  }
+  .bio-section {
+    margin-top: 0;
+    max-height: 30.2vw;
+    flex: 0 0 50%;
+  }
+  .bio-section p {
+    padding-bottom: 1em;
+    font-size: 1.5vw;
+  }
 }
 
 // animation //////////////////////////////
