@@ -7,7 +7,7 @@
 **Backend Server Git**: https://github.com/huangrkul/portfolio2020_server
 
 ## Overview
-My Portfolio that encompasses all the projects that I worked on in the past seven+ years.
+My Portfolio that encompasses a selection of my work from the past several years.
 
 ## Setup
 - Please take a look at package.json for environment setup.
