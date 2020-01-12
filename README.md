@@ -18,9 +18,11 @@ My Portfolio that encompasses all the projects that I worked on in the past seve
 - tools: React, React-Dom, Babel, Webpack, Node, SASS/SCSS
 
 ## Change Log
-==1.0.2==
-- Using Galen's webpack config example and separated out the webpack config files to common, dev, and prod.
-==1.0.1==
-- took out server.js in favor of webpack-dev-server package.
 ==1.0.0==
+- Project completed and deployed
+==0.0.3==
+- Using Galen's webpack config example and separated out the webpack config files to common, dev, and prod.
+==0.0.2==
+- took out server.js in favor of webpack-dev-server package.
+==0.0.1==
 - basic environment setup completed
