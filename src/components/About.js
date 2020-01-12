@@ -65,13 +65,7 @@ export default class About extends React.Component {
             <section className="bio-section hide">
               <p>
                 My name is Will Huang.  I am a front-end driven full-stack web developer.  My background is in animation and I am very passionate in creating interactive and engaging web experience.
-              </p>  
-              <p>
-                I believe front-end development isn’t just using another layout template, but something much more.  It should be a work of art that reflects the developer’s creativity and technical innovation.
-              </p>
-              <p>
-                In that regard, I am confident this is what I can bring to any team.  I worked in advertising for seven years both as motion designer and front end web developer.  I can efficiently produce high quality deliverables that are interactive and engaging.
-              </p>
+              </p> 
             </section>
           </div>
         </div>

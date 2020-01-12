@@ -18,7 +18,7 @@ export default class Contact extends React.Component {
     }, 3000)
   }
 
-  componentWillMount() {
+  componentWillUnmount() {
     clearTimeout(sqTimer);
   }
 

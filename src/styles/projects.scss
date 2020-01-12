@@ -43,7 +43,7 @@
 }
 
 .projects-single {
-  position: absolute;
+  position: fixed;
   left: 100%;
   top: 0px;
   background-color: $site-black-rgba;
@@ -55,8 +55,8 @@
 }
 
 .projects-single > div {
-  width: 60%;
-  margin: 2vw auto;
+  width: 40%;
+  margin: 6vw auto;
   background-color: $site-brown;
   border: 1em solid $site-brown;
   border-radius: 1em;
@@ -109,6 +109,31 @@
   .projects-page {
     width: 80%;
   }
+  .projects-single > div {
+    width: 60%;
+    margin: 10vw auto;
+  }
+  .projects-list > div > h3 {
+    font-size: 2vw;
+    margin-top: 1vw;
+  }
+  .projects-single .closeBtn > button {
+    width: 5vw;
+    height: 5vw;
+    font-size: 2.5vw;
+  }
+  .projects-single .buttons button {
+    flex: 0 0 40%;
+    font-size: 2.5vw;
+    border-radius: 0.8em;
+    padding: 1.5vw;
+  }
+  .projects-single p {
+    font-size: 1.5vw;
+  }
+  .projects-single .buttons {
+    margin: 2vw 0 0 0;
+  }
 }
 
 @media (max-width: 768px) {
@@ -116,8 +141,20 @@
     flex: 0 0 40%;
     margin-top: 1vw;
   }
+  .projects-list > div > h3 {
+    font-size: 3vw;
+  }
   .projects-single > div {
     width: 80%;
+    margin: 12vw auto;
+  }
+  .projects-single .closeBtn > button {
+    width: 5vw;
+    height: 5vw;
+    font-size: 2.5vw;
+  }
+  .projects-single p {
+    font-size: 2.5vw;
   }
 }
 
@@ -125,5 +162,15 @@
 @media (max-width: 500px) {
   .projects-list > div {
     flex: 0 0 80%;
-  }  
+    margin-top: 2.5vw;
+  }
+  .projects-single > div {
+    width: 80%;
+    margin: 12vw auto;
+  }
+  .projects-single .closeBtn > button {
+    width: 5vw;
+    height: 5vw;
+    font-size: 2.5vw;
+  }
 }

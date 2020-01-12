@@ -70,3 +70,49 @@
     background-position-x: -2000%;
   }
 }
+
+@media (max-width: 1200px) {
+  .contact-page {
+    width: 60%;
+  }
+  .contact-content h2 {
+    font-size: 2vw;
+  }
+  .contact-content p {
+    font-size: 1.5vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-page {
+    width: 70%;
+  }
+  .contact-content {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2em;
+  }
+  
+  .contact-content > section:first-child {
+    flex: 0 0 80%;
+  }
+  
+  .contact-content > section:last-child {
+    margin-top: 2vw;
+    flex: 0 0 80%;
+  }
+
+  .contact-content > section:last-child > div{
+    margin: auto;
+  }
+  .contact-content h2 {
+    font-size: 4vw;
+  }
+  .contact-content p {
+    font-size: 3vw;
+  }
+  .willsaur-idle, .willsaur-wave {
+    width: 18vw;
+    height: 21vw;
+  }
+}

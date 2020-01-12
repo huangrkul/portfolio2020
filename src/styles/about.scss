@@ -38,6 +38,7 @@
   display: flex;
   width: 100%;
   text-align: center;
+  margin: auto;
 }
 
 .skills-section > div:first-child > h2 {
@@ -73,14 +74,11 @@
 .bio-section {
   margin-top: 2em;
   padding: 1em;
-  max-height: 10.2vw;
-  overflow: scroll;
-  overflow-x: hidden;
 }
 
 .bio-section p {
-  padding-bottom: 1em;
-  font-size: 0.8vw;
+  line-height: 1vw;
+  font-size: 1vw;
 }
 
 @media (max-width: 1200px) {
@@ -101,23 +99,40 @@
     justify-content: space-between;
   } 
   .skills-section > div:first-child {
-    display: flex;
     width: 60%;
-    text-align: center;
-    margin: auto;
+  }
+  .skills-section > div:first-child > h2 {
+    font-size: 2.5vw;
   }
   .profile-section {
     flex: 0 0 45%;
   }
   .bio-section {
-    margin-top: 0;
-    max-height: 30.2vw;
     flex: 0 0 50%;
+    margin-top: 0;
   }
   .bio-section p {
-    padding-bottom: 1em;
-    font-size: 1.5vw;
+    font-size: 2vw;
+    line-height: 2vw;
+    margin-top: 6vw;
   }
+}
+
+@media (max-width: 768px) {
+  .skills-section{
+    margin-top: 2vw;
+  }
+  .skills-section > div:first-child {
+    width: 80%;
+    margin-bottom: 2vw;
+  }
+  .skills-section > div:first-child > h2 {
+    font-size: 3vw;
+  }
+  .bio-section p {
+    font-size: 2.5vw;
+    line-height: 2.5vw;
+  } 
 }
 
 // animation //////////////////////////////
@@ -141,7 +156,7 @@
 @keyframes fadein-bottom {
   0% {
     opacity: 0;
-    transform: translateY(200px);
+    transform: translateY(50px);
   }
   100% {
     opacity: 1;

@@ -5,6 +5,7 @@
 .demos-content {
   margin-top: 4vw;
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   justify-content: space-around;
 
@@ -17,4 +18,19 @@
   border: 1em solid $site-brown-drk;
   border-radius: 1em;
   overflow: hidden;
+}
+
+@media (max-width: 1200px) {
+  .demos-content > section {
+    flex: 0 0 80%;
+    height: 35vw;
+    margin-bottom: 5vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .demos-content > section {
+    height: 50vw;
+    margin-bottom: 5vw;
+  }
 }
