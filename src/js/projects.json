@@ -3,7 +3,7 @@
     "img": "portfolio2020.jpg",
     "title": "Portfolio 2020",
     "url": "",
-    "github": "",
+    "github": "https://github.com/huangrkul/portfolio2020",
     "desc": "Current version of the portfolio uses React/Webpack for front-end server and Express for back-end API request."
   },
   {
