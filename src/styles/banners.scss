@@ -41,7 +41,7 @@
   background-color: $site-yellow-lgt;
   border: 1em solid $site-yellow-lgt;
   border-radius: 1em;
-  font-size: 0.7vw;
+  font-size: 1vw;
   font-family: $base-font;
 }
 
@@ -77,6 +77,16 @@
   border: 0;
 }
 
+@media (max-width: 1200px) {
+  .banners-content select {
+    font-size: 1vw;
+  }
+  .iframe-box div:first-child {
+    margin-top: 2vw;
+    font-size: 1.5vw;
+  }
+}
+
 @media (max-width: 768px) {
   .banners-page {
     width: 90%;
@@ -96,11 +106,11 @@
     font-size: 2vw;
   }
   .banners-content select {
-    font-size: 1.5vw;
+    font-size: 2vw;
   }
   .iframe-box div:first-child {
     margin-top: 2vw;
-    font-size: 2vw;
+    font-size: 2.5vw;
   }
   .banners-content .iframe-box {
     min-height: 40vw;

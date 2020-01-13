@@ -47,7 +47,12 @@ export default class Homepage extends React.Component {
     setAni('.title-container div:nth-child(2) img:first-child', 1800, 'huang-inbtm');
     setAni('.title-container div:nth-child(2) img:last-child', 1800, 'huang-intop');
     setTimeout(() => {this.titleSequence()},2500);
-    setAni('.homepage ul', 2800, 'enter-bottom');
+    setAni('.homepage ul', 2700, 'enter-bottom');
+    setAni('.homepage ul li:nth-child(1)', 3000, 'section-enter');
+    setAni('.homepage ul li:nth-child(2)', 3100, 'section-enter');
+    setAni('.homepage ul li:nth-child(3)', 3200, 'section-enter');
+    setAni('.homepage ul li:nth-child(4)', 3300, 'section-enter');
+    setAni('.homepage ul li:nth-child(5)', 3400, 'section-enter');
 
   }
 
@@ -78,11 +83,11 @@ export default class Homepage extends React.Component {
           </div>
         </section>
         <ul className='hide'>
-          <li onClick={() => this.props.onNextPage('btnAbout')}>Profile</li>
-          <li onClick={() => this.props.onNextPage('btnProjects')}>Projects</li>
-          <li onClick={() => this.props.onNextPage('btnBanners')}>Banners</li>
-          <li onClick={() => this.props.onNextPage('btnDemo')}>Demos</li>
-          <li onClick={() => this.props.onNextPage('btnContact')}>Contact</li>
+          <li className='hide' onClick={() => this.props.onNextPage('btnAbout')}>Profile</li>
+          <li className='hide' onClick={() => this.props.onNextPage('btnProjects')}>Projects</li>
+          <li className='hide' onClick={() => this.props.onNextPage('btnBanners')}>Banners</li>
+          <li className='hide' onClick={() => this.props.onNextPage('btnDemo')}>Demos</li>
+          <li className='hide' onClick={() => this.props.onNextPage('btnContact')}>Contact</li>
         </ul>
       </article>
     )

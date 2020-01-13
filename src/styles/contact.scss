@@ -4,11 +4,13 @@
 
 .contact-content {
   display: flex;
+  margin-top: 4em;
   width: 100%;
   background-color: $site-brown;
   border: 1em solid $site-brown;
   border-radius: 1em;
   align-items: center;
+  padding: 2em;
 }
 
 .contact-content > section:first-child {
@@ -20,55 +22,13 @@
   flex: 0 0 40%;
 }
 
+.contact-content > section:last-child img {
+  padding: 1em;
+  width: 100%;
+}
+
 .contact-content h2 {
   color: $site-black;
-}
-
-.preload {
-  display: none;
-}
-
-.willsaur-idle, .willsaur-wave {
-  width: 14vw;
-  height: 16vw;
-}
-
-.willsaur-idle {
-  background-image: url('../../public/assets/willsaur/willsaur-idle.png');
-  background-size: 2400%;
-  animation-name: willsaur-idle;
-  animation-duration: 1000ms;
-  animation-timing-function: steps(23);
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
-}
-
-@keyframes willsaur-idle {
-  from {
-    background-position-x: 0%;
-  }
-  to {
-    background-position-x: -2300%;
-  }
-}
-
-.willsaur-wave {
-  background-image: url('../../public/assets/willsaur/willsaur-wave.png');
-  background-size: 2000%;
-  animation-name: willsaur-wave;
-  animation-duration: 1000ms;
-  animation-timing-function: steps(20);
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
-}
-
-@keyframes willsaur-wave {
-  from {
-    background-position-x: 0%;
-  }
-  to {
-    background-position-x: -2000%;
-  }
 }
 
 @media (max-width: 1200px) {
@@ -90,7 +50,6 @@
   .contact-content {
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 2em;
   }
   
   .contact-content > section:first-child {
@@ -110,9 +69,5 @@
   }
   .contact-content p {
     font-size: 3vw;
-  }
-  .willsaur-idle, .willsaur-wave {
-    width: 18vw;
-    height: 21vw;
   }
 }
