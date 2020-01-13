@@ -45,11 +45,11 @@ export default class AboutProfile extends React.Component {
         break;
       case 'snow':
         this.setState({profileBgColor: 'profile-bg-gray'});
-        this.setState({profileBg: 'profile-bg-cloudy'});
+        this.setState({profileBg: 'profile-bg-snow'});
         break;
       case 'sleet':
         this.setState({profileBgColor: 'profile-bg-gray'});
-        this.setState({profileBg: 'profile-bg-cloudy'});
+        this.setState({profileBg: 'profile-bg-snow'});
         break;
       case 'wind':
         this.setState({profileBgColor: 'profile-bg-dark'});

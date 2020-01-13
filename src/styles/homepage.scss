@@ -34,7 +34,6 @@
 }
 
 .homepage ul li:hover {
-  transform: scale(1.1);
   background-color: $site-yellow;
   border: 0.5em solid $site-yellow;
   color: $site-black;
@@ -98,7 +97,7 @@
     margin-top: 2vw;
   }
   .title-container div:first-child {
-    height: 12vw;
+    height: 11.5vw;
   }
   .title-container div:nth-child(2) {
     height: 14vw;

@@ -67,6 +67,25 @@
   }
 }
 
+.profile-bg-snow {
+  background-image: url('../../public/assets/profiles/profile-bg-snow.png');
+  background-size: 1500%;
+  animation-name: profile-bg-snow;
+  animation-duration: 1500ms;
+  animation-timing-function: steps(15, end);
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+@keyframes profile-bg-snow {
+  from {
+    background-position-x: 0%;
+  }
+  to {
+    background-position-x: -1500%;
+  }
+}
+
 .profile-section > ul {
   display: flex;
   text-align: center;
