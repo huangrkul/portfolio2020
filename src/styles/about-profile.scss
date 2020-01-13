@@ -71,8 +71,8 @@
   background-image: url('../../public/assets/profiles/profile-bg-snow.png');
   background-size: 1500%;
   animation-name: profile-bg-snow;
-  animation-duration: 1500ms;
-  animation-timing-function: steps(15, end);
+  animation-duration: 2000ms;
+  animation-timing-function: steps(14, end);
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
 }
@@ -82,7 +82,7 @@
     background-position-x: 0%;
   }
   to {
-    background-position-x: -1500%;
+    background-position-x: -1400%;
   }
 }
 
