@@ -50,6 +50,7 @@ export default class Projects extends React.Component {
 
   render() {
     let projects = this.props.allProjects;
+    console.log(this.state.singleGit);
     return (
       <article className="projects-page">
         <h1 className="hide">WEB PROJECTS</h1>
@@ -72,7 +73,7 @@ export default class Projects extends React.Component {
             <p>{this.state.singleDesc}</p>
             <div className="buttons">
               <a href={this.state.singleUrl} target="_blank"><button>Website</button></a>
-              <a href={this.state.singleGit} target="_blank"><button>Github</button></a>
+              <a href={this.state.singleGit} className={this.state.singleGit === null ? 'dis-none' : ''} target="_blank"><button>Github</button></a>
             </div>
           </div>
         </section>

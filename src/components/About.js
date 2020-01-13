@@ -64,7 +64,7 @@ export default class About extends React.Component {
             <AboutProfile weather={this.props} />
             <section className="bio-section hide">
               <p>
-                My name is Will Huang.  I am a front-end driven full-stack web developer.  My background is in animation and I am very passionate in creating interactive and engaging web experience.
+                My name is Will Huang.  I am a front-end driven full-stack web developer.  My background is in animation, and I am very passionate about creating interactive and engaging web experiences.
               </p> 
             </section>
           </div>

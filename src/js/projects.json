@@ -4,14 +4,14 @@
     "title": "Portfolio 2020",
     "url": "",
     "github": "https://github.com/huangrkul/portfolio2020",
-    "desc": "Current version of the portfolio uses React/Webpack for front-end server and Express for back-end API request."
+    "desc": "Current version of the portfolio uses React/Webpack for front-end server and Express for back-end API requests."
   },
   {
     "img": "blowmind.jpg",
     "title": "Blow Your Mind",
     "url": "http://willhuanganimator.com/projects/blow-your-mind/",
     "github": "https://github.com/huangrkul/blow-your-mind",
-    "desc": "This was a final group project for Code Fellows 201.  The challenge was to take everything we learned and create an web app in 4 days.  I was responsible for creating all art assets, CSS styling / animation, and core game mechanics."
+    "desc": "This was a final group project for Code Fellows 201.  The challenge was to take everything we learned and create a web app in 4 days.  I was responsible for creating all art assets, CSS styling / animation, and core game mechanics."
   },
   {
     "img": "horns.jpg",
@@ -25,34 +25,34 @@
     "title": "Book App",
     "url": "https://huangrkul-book-app.herokuapp.com/",
     "github": "https://github.com/huangrkul/book-app",
-    "desc": "This is a web app that allows users to query Google Book API and store / edit their favorite entries into postgres database using SQL."
+    "desc": "This is a web app that allows users to query Google Book API and store / edit their favorite entries into a postgres database using SQL."
   },
   {
     "img": "busmall.jpg",
     "title": "Bus Mall",
     "url": "http://willhuanganimator.com/projects/bus-mall/",
     "github": "https://github.com/huangrkul/bus-mall",
-    "desc": "This small app takes user inputs and display the data as chart."
+    "desc": "This small app takes user inputs and displays the data as chart."
   },
   {
     "img": "kexp-clash.jpg",
     "title": "KEXP Clash Day 2019",
     "url": "http://internationalclashday.com/",
-    "github": "private, request only",
-    "desc": "This is a single page application for client KEXP.  I was responsible for CSS layout and responsive styling"
+    "github": null,
+    "desc": "This is a single page application for client KEXP.  I was responsible for CSS layout and responsive styling."
   },
   {
     "img": "kexp-report2017.jpg",
     "title": "KEXP Annual Report 2017",
     "url": "https://annualreport.kexp.org/2017/programming_highlights.html",
-    "github": "private, request only",
-    "desc": "Annual report site for client KEXP.  I was responsible for all styling and functionalities in programming highlight page"
+    "github": null,
+    "desc": "Annual report site for client KEXP.  I was responsible for all styling and functionalities in programming highlight page."
   },
   {
     "img": "publicis.jpg",
     "title": "Publicis Website",
     "url": "http://publicisseattle.com/",
-    "github": "Unavailable",
+    "github": null,
     "desc": "Wordpress customization and maintenance for my previous company website."
   }
   

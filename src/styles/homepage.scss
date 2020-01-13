@@ -1,12 +1,43 @@
 .homepage {
-  display: flex;
   width: 60%;
   margin: 10em auto;
+}
+
+.logo-title {
+  display: flex;
   flex-wrap: wrap;
 }
 
-.homepage > div:first-child, .homepage > div:last-child {
-  flex: 0 1 50%;
+.logo-title > div:first-child, .logo-title > div:last-child {
+  flex: 0 0 50%;
+}
+
+.homepage ul {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 8vw;
+  background-color: $site-brown-drk;
+  border: 1em solid $site-brown-drk;
+  border-radius: 1em;
+}
+
+.homepage ul li {
+  font-size: 1.5vw;
+  font-family: $title-font;
+  flex: 0 0 15%;
+  background-color: $site-brown;
+  border: 0.5em solid $site-brown;
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+.homepage ul li:hover {
+  transform: scale(1.1);
+  background-color: $site-yellow;
+  border: 0.5em solid $site-yellow;
+  color: $site-black;
 }
 
 .logo-container, .title-container {
@@ -56,10 +87,10 @@
   .homepage {
     margin: 14em auto;
   }
-  .homepage > div:first-child, .homepage > div:last-child {
+  .logo-title > div:first-child, .logo-title > div:last-child {
     flex: 0 1 100%;
   }
-  .homepage > div:first-child{
+  .logo-title > div:first-child{
     height: 50vw;
   }
   .title-container {
@@ -76,6 +107,23 @@
   .title-seq {
     margin-top: 2vw;
     font-size: 4vw;
+  }
+
+  .homepage ul {
+    flex-wrap: wrap;
+    width: 60%;
+    margin: 10vw auto
+  }
+  
+  .homepage ul li {
+    font-size: 3vw;
+    font-family: $title-font;
+    flex: 0 0 100%;
+    background-color: $site-brown;
+    border: 0.5em solid $site-brown;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
   }
 }
 

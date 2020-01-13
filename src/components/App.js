@@ -62,7 +62,7 @@ export default class App extends React.Component {
     let pageToRender;
     switch(this.state.nextPage) {
       case 'index':
-        pageToRender = <Homepage />
+        pageToRender = <Homepage onNextPage={this.onNextPage} />
         break;
       case 'btnAbout':
         pageToRender = <About weatherData={this.state.weatherData} />
@@ -80,7 +80,7 @@ export default class App extends React.Component {
         pageToRender = <Contact />
         break;
       default:
-        pageToRender = <Homepage />
+        pageToRender = <Homepage onNextPage={this.onNextPage} />
     }
 
     return (

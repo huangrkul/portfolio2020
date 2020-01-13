@@ -16,6 +16,10 @@ const titleArray = [
 ];
 
 export default class Homepage extends React.Component {
+  constructor(props) {
+    super(props);
+    console.log(props.onNextPage);
+  }
 
   titleSequence() {
     const titleDiv = document.querySelector('.title-seq');
@@ -43,6 +47,8 @@ export default class Homepage extends React.Component {
     setAni('.title-container div:nth-child(2) img:first-child', 1800, 'huang-inbtm');
     setAni('.title-container div:nth-child(2) img:last-child', 1800, 'huang-intop');
     setTimeout(() => {this.titleSequence()},2500);
+    setAni('.homepage ul', 2800, 'enter-bottom');
+
   }
 
   componentWillUnmount() {
@@ -52,23 +58,32 @@ export default class Homepage extends React.Component {
   render() {
     return (
       <article className="homepage">
-        <div>
-          <section className="logo-container logo-enter-hero">
-            <img className="hide" src={logoWhite} />
-            <img className="hide" src={logoCircle}/>
-            <img className="hide" src={logo}/>
-          </section>
-        </div>
-        <div>
-          <section className="title-container">
-            <div></div>
-            <div>
-              <img className="hide" src={titleHag}/>
-              <img className="hide" src={titleUn}/>
-            </div>
-            <div className="title-seq hide"></div>
-          </section>
-        </div>
+        <section className="logo-title">
+          <div>
+            <section className="logo-container logo-enter-hero">
+              <img className="hide" src={logoWhite} />
+              <img className="hide" src={logoCircle}/>
+              <img className="hide" src={logo}/>
+            </section>
+          </div>
+          <div>
+            <section className="title-container">
+              <div></div>
+              <div>
+                <img className="hide" src={titleHag}/>
+                <img className="hide" src={titleUn}/>
+              </div>
+              <div className="title-seq hide"></div>
+            </section>
+          </div>
+        </section>
+        <ul className='hide'>
+          <li onClick={() => this.props.onNextPage('btnAbout')}>Profile</li>
+          <li onClick={() => this.props.onNextPage('btnProjects')}>Projects</li>
+          <li onClick={() => this.props.onNextPage('btnBanners')}>Banners</li>
+          <li onClick={() => this.props.onNextPage('btnDemo')}>Demos</li>
+          <li onClick={() => this.props.onNextPage('btnContact')}>Contact</li>
+        </ul>
       </article>
     )
   }

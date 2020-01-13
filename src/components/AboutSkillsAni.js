@@ -33,8 +33,8 @@ export default class AboutSkillsAni extends React.Component {
             )
           })}
         </h3>
-        <p>Motion Designer at Publicis (2011 ~ 2019)</p>
-        <p>Master of Fine Art Degree in 3D Character Animation - Academy of Art University (2006 ~ 2009)</p>
+        <p>Motion Designer at Publicis (2011 - 2019)</p>
+        <p>Master of Fine Art Degree in 3D Character Animation - Academy of Art University (2006 - 2009)</p>
 
         <h3>
           {[...'TOOLS'].map((char, idx) => {
