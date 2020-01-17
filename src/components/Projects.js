@@ -69,7 +69,7 @@ export default class Projects extends React.Component {
           <div>
             <div className="title-font closeBtn"><button onClick={() => this.closeSingle()}>X</button></div>
             <h2 className="title-font">{this.state.singleTitle}</h2>
-            <img src={this.state.singleImg} />
+            <div><img src={this.state.singleImg} /></div>
             <p>{this.state.singleDesc}</p>
             <div className="buttons">
               <a href={this.state.singleUrl} target="_blank"><button>Website</button></a>

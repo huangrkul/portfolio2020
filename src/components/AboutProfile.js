@@ -92,7 +92,7 @@ export default class AboutProfile extends React.Component {
 
 
   render() {
-    let resume = "https://docs.google.com/document/d/1saDtEUnkRsreD38D4LsmqwNWBbCXTW76uXOyCpsFjhM/edit?usp=sharing";
+    let resume = "http://willhuanganimator.com/media/william-huang-resume.pdf";
 
     return (
       <section className="profile-section hide">

@@ -37,7 +37,7 @@
   cursor: auto;
 }
 
-.projects-list > div > img, .projects-single > div > img {
+.projects-list > div > img, .projects-single > div > div:nth-child(3) img {
   width: 100%;
   border: 0.5em solid $site-brown-exdrk;
 }
@@ -55,6 +55,8 @@
 }
 
 .projects-single > div {
+  display: flex;
+  flex-direction: column;
   width: 35%;
   margin: 6vw auto;
   background-color: $site-brown;
@@ -68,32 +70,41 @@
   left: 0px;
 }
 
+.projects-single > div > div:first-child {
+  flex: 0 0 5%;
+}
+
 .projects-single .closeBtn {
   text-align: right;
 }
 
 .projects-single .closeBtn > button {
-  width: 2vw;
-  height: 2vw;
-  font-size: 1vw;
+  width: 2em;
+  height: 2em;
+  font-size: 1em;
 }
 
 .projects-single h2 {
+  flex: 0 0 10%;
   background-color: $site-brown-exdrk;
   border: 0.5em solid $site-brown-exdrk;
   border-radius: 0.5em 0.5em 0 0;
   margin: 0.5vw 0 0 0;
 }
 
+.projects.single > div > div:nth-child(2) {
+  flex: 0 1 25%;
+}
+
 .projects-single p {
+  flex: 0 0 20%;
   background-color: $site-brown-exdrk;
   border: 0.5em solid $site-brown-exdrk;
   border-radius: 0 0 0.5em 0.5em;
-  padding: 1vw;
 }
 
 .projects-single .buttons {
-  margin: 1vw 0 0 0;
+  flex: 0 0 15%;
   display: flex;
   justify-content: space-around;
 }
@@ -103,80 +114,4 @@
   font-size: 1.2vw;
   border-radius: 0.6em;
   padding: 0.5vw;
-}
-
-@media (max-width: 1200px) {
-  .projects-page {
-    width: 80%;
-  }
-  .projects-single > div {
-    width: 50%;
-    margin: 9vw auto;
-  }
-  .projects-list > div > h3 {
-    font-size: 2vw;
-    margin-top: 1vw;
-  }
-  .projects-single h2 {
-    font-size: 2vw;
-  }
-  .projects-single .closeBtn > button {
-    width: 4vw;
-    height: 4vw;
-    font-size: 2vw;
-  }
-  .projects-single .buttons button {
-    flex: 0 0 35%;
-    font-size: 2vw;
-    border-radius: 0.6em;
-    padding: 1.3vw;
-  }
-  .projects-single p {
-    font-size: 1.3vw;
-  }
-  .projects-single .buttons {
-    margin: 2vw 0 0 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .projects-list > div {
-    flex: 0 0 40%;
-    margin-top: 1vw;
-  }
-  .projects-list > div > h3 {
-    font-size: 3vw;
-  }
-  .projects-single > div {
-    width: 80%;
-    margin: 12vw auto;
-  }
-  .projects-single h2 {
-    font-size: 3vw;
-  }
-  .projects-single .closeBtn > button {
-    width: 5vw;
-    height: 5vw;
-    font-size: 2.5vw;
-  }
-  .projects-single p {
-    font-size: 2.5vw;
-  }
-}
-
-
-@media (max-width: 500px) {
-  .projects-list > div {
-    flex: 0 0 80%;
-    margin-top: 2.5vw;
-  }
-  .projects-single > div {
-    width: 80%;
-    margin: 12vw auto;
-  }
-  .projects-single .closeBtn > button {
-    width: 5vw;
-    height: 5vw;
-    font-size: 2.5vw;
-  }
 }
