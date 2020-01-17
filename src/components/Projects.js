@@ -69,11 +69,17 @@ export default class Projects extends React.Component {
           <div>
             <div className="title-font closeBtn"><button onClick={() => this.closeSingle()}>X</button></div>
             <h2 className="title-font">{this.state.singleTitle}</h2>
-            <img src={this.state.singleImg} />
-            <p>{this.state.singleDesc}</p>
-            <div className="buttons">
-              <a href={this.state.singleUrl} target="_blank"><button>Website</button></a>
-              <a href={this.state.singleGit} className={this.state.singleGit === null ? 'dis-none' : ''} target="_blank"><button>Github</button></a>
+            <div>
+              <section className="single-img">
+                <img src={this.state.singleImg} />
+              </section>
+              <section className="single-detail">
+                <p>{this.state.singleDesc}</p>
+                <div className="buttons">
+                  <a href={this.state.singleUrl} target="_blank"><button>Website</button></a>
+                  <a href={this.state.singleGit} className={this.state.singleGit === null ? 'dis-none' : ''} target="_blank"><button>Github</button></a>
+                </div>
+              </section>
             </div>
           </div>
         </section>

@@ -37,7 +37,7 @@
   cursor: auto;
 }
 
-.projects-list > div > img, .projects-single > div > img {
+.projects-list > div > img {
   width: 100%;
   border: 0.5em solid $site-brown-exdrk;
 }
@@ -55,13 +55,24 @@
 }
 
 .projects-single > div {
-  width: 35%;
+  width: 60%;
   margin: 6vw auto;
   background-color: $site-brown;
   border: 1em solid $site-brown;
   border-radius: 1em;
-  text-align: center;
   padding: 1vw;
+}
+
+.projects-single > div > div:last-child {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: $site-brown-exdrk;
+}
+
+.projects-single > div > div:last-child section {
+  flex: 0 0 50%;
+  padding: 1vw 1vw 4vw 1vw;
 }
 
 .projects-single-reveal {
@@ -79,21 +90,25 @@
 }
 
 .projects-single h2 {
+  text-align: center;
   background-color: $site-brown-exdrk;
   border: 0.5em solid $site-brown-exdrk;
   border-radius: 0.5em 0.5em 0 0;
   margin: 0.5vw 0 0 0;
 }
 
-.projects-single p {
-  background-color: $site-brown-exdrk;
-  border: 0.5em solid $site-brown-exdrk;
-  border-radius: 0 0 0.5em 0.5em;
-  padding: 1vw;
+.projects-single .single-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.projects-single .single-img img {
+  width: 100%;
 }
 
 .projects-single .buttons {
-  margin: 1vw 0 0 0;
+  margin-top: 2em;
   display: flex;
   justify-content: space-around;
 }
@@ -103,39 +118,31 @@
   font-size: 1.2vw;
   border-radius: 0.6em;
   padding: 0.5vw;
+  background-color: $site-yellow;
+  border: 0.5em solid $site-yellow;
 }
+
+.projects-single .buttons button:hover {
+  color: $site-black;
+  background-color: $site-yellow-lgt;
+  border: 0.5em solid $site-yellow-lgt;
+}
+
 
 @media (max-width: 1200px) {
   .projects-page {
     width: 80%;
   }
-  .projects-single > div {
-    width: 50%;
-    margin: 9vw auto;
-  }
   .projects-list > div > h3 {
     font-size: 2vw;
     margin-top: 1vw;
   }
+  .projects-single > div {
+    width: 65%;
+    margin: 9vw auto;
+  }
   .projects-single h2 {
     font-size: 2vw;
-  }
-  .projects-single .closeBtn > button {
-    width: 4vw;
-    height: 4vw;
-    font-size: 2vw;
-  }
-  .projects-single .buttons button {
-    flex: 0 0 35%;
-    font-size: 2vw;
-    border-radius: 0.6em;
-    padding: 1.3vw;
-  }
-  .projects-single p {
-    font-size: 1.3vw;
-  }
-  .projects-single .buttons {
-    margin: 2vw 0 0 0;
   }
 }
 
@@ -148,19 +155,24 @@
     font-size: 3vw;
   }
   .projects-single > div {
-    width: 80%;
+    width: 90%;
     margin: 12vw auto;
   }
+  .projects-single > div > div:last-child section {
+    flex: 0 0 100%;
+    padding: 1vw 2vw 3vw 2vw;
+  }
   .projects-single h2 {
-    font-size: 3vw;
+    font-size: 4vw;
   }
   .projects-single .closeBtn > button {
-    width: 5vw;
-    height: 5vw;
-    font-size: 2.5vw;
+    width: 4vw;
+    height: 4vw;
+    font-size: 2vw;
   }
-  .projects-single p {
-    font-size: 2.5vw;
+  .projects-single .buttons button {
+    flex: 0 0 40%;
+    font-size: 2.8vw;
   }
 }
 
@@ -169,14 +181,5 @@
   .projects-list > div {
     flex: 0 0 80%;
     margin-top: 2.5vw;
-  }
-  .projects-single > div {
-    width: 80%;
-    margin: 12vw auto;
-  }
-  .projects-single .closeBtn > button {
-    width: 5vw;
-    height: 5vw;
-    font-size: 2.5vw;
   }
 }
