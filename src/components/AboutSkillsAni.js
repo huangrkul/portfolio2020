@@ -2,9 +2,6 @@ import React from 'react';
 import { setAni } from '../js/snippets';
 
 export default class AboutSkillsAni extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   componentDidMount() {
     setAni('.skills-ani-section',0,'dev-section-reveal');

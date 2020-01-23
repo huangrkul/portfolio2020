@@ -10,9 +10,6 @@ const headerBtns = [
 ];
 
 export default class Header extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   
   componentDidMount() {
     const menuLi = document.querySelectorAll('.btn-init');

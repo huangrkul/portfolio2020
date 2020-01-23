@@ -16,20 +16,19 @@ function Custom(custom) {
 }
 
 export default class Banners extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      default: 'Banners best viewed on desktop full screen as they were not designed for mobile.',
-      bannersArray: [], 
-      customsArray: [], 
-      currentUnit: null,
-      title: '', 
-      sizes: [],
-      url: '',
-      urlWidth: 0,
-      urlHeight: 0
-    };
-  }
+  
+  state = {
+    default: 'Banners best viewed on desktop full screen as they were not designed for mobile.',
+    bannersArray: [], 
+    customsArray: [], 
+    currentUnit: null,
+    title: '', 
+    sizes: [],
+    url: '',
+    urlWidth: 0,
+    urlHeight: 0
+  };
+
 
   componentDidMount() {
     let banners = bannersJson.map(banner => {

@@ -2,10 +2,7 @@ import React from 'react';
 import { setAni } from '../js/snippets';
 
 export default class AboutSkillsDev extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
+  
   componentDidMount() {
     setAni('.skills-dev-section',0,'dev-section-reveal');
     const headline1 = document.querySelectorAll('.skills-dev-section > h3:first-of-type > div');

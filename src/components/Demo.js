@@ -2,17 +2,11 @@ import React from 'react';
 import { setAni } from '../js/snippets';
 
 export default class Demo extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
+  
   componentDidMount() {
     setAni('h1',0,'enter-bottom');
     setAni('.demos-content > section:first-child',100,'section-enter');
     setAni('.demos-content > section:last-child',200,'section-enter');
-  }
-
-  componentWillUnmount() {
   }
 
   render() {

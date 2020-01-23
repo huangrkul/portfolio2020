@@ -21,10 +21,8 @@ function Project(project) {
 }
 
 export default class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {nextPage: null, weatherData: null, projectsArray: null};
-  };
+
+  state = {nextPage: null, weatherData: null, projectsArray: null};
 
   componentDidMount() {
     this.fetchWeatherData();

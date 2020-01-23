@@ -4,10 +4,7 @@ import flower from '../../public/assets/homepage/contact-flower.png';
 
 
 export default class Contact extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
+  
   componentDidMount() {
     setAni('h1',0,'enter-bottom');
   }

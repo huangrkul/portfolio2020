@@ -5,17 +5,14 @@ import profileCold from '../../public/assets/profiles/profile-cold.png';
 let timer;
 
 export default class AboutProfile extends React.Component {
-  constructor(props) {
-    super(props);
-    console.log(props.weather);
-    this.state = {
-      temp: '??',
-      summary: '??',
-      profileURL: profileWarm,
-      profileBgColor: 'profile-bg-day', 
-      profileBg: 'profile-bg-sun',
-    };
-  }
+  
+  state = {
+    temp: '??',
+    summary: '??',
+    profileURL: profileWarm,
+    profileBgColor: 'profile-bg-day', 
+    profileBg: 'profile-bg-sun',
+  };
 
   togglePhoto() {
     document.querySelector('.photo-box').classList.toggle('photo-hide');

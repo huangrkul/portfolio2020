@@ -16,10 +16,6 @@ const titleArray = [
 ];
 
 export default class Homepage extends React.Component {
-  constructor(props) {
-    super(props);
-    console.log(props.onNextPage);
-  }
 
   titleSequence() {
     const titleDiv = document.querySelector('.title-seq');

@@ -5,10 +5,8 @@ import AboutProfile from './AboutProfile';
 import { setAni } from '../js/snippets';
 
 export default class About extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {loadSkillsComp: 'dev'};
-  }
+  
+  state = {loadSkillsComp: 'dev'};
 
   componentDidMount() {
     setAni('h1',0,'enter-bottom');

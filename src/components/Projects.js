@@ -4,16 +4,14 @@ import { setAni } from '../js/snippets';
 let seqTimer;
 
 export default class Projects extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      singleImg: null, 
-      singleTitle: null, 
-      singleUrl: null,
-      singleGit: null,
-      singleDesc: null
-    };
-  }
+
+  state = {
+    singleImg: null, 
+    singleTitle: null, 
+    singleUrl: null,
+    singleGit: null,
+    singleDesc: null
+  };
 
   componentDidMount() {
     let divId = 0;

@@ -1,10 +1,8 @@
 import React from 'react';
 
 export default class HeaderBtn extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {hovering: false}
-  }
+  
+  state = {hovering: false};
 
   handleOver = () => {
     this.setState({hovering: true})
