@@ -2,7 +2,7 @@ import React from 'react';
 import profileWarm from '../../public/assets/profiles/profile-warm.png';
 import profileCold from '../../public/assets/profiles/profile-cold.png';
 
-let timer;
+// let timer;
 
 export default class AboutProfile extends React.Component {
   
@@ -18,9 +18,9 @@ export default class AboutProfile extends React.Component {
     document.querySelector('.photo-box').classList.toggle('photo-hide');
   }
 
-  populate() {
+  populate(data) {
 
-    const weather = this.props.weather.weatherData;
+    const weather = data;
     const temperature = Math.round(weather.temp * 10) / 10;
     let profile = weather.temp > 65 ? profileWarm : profileCold;
     this.setState({profileURL: profile});
@@ -74,18 +74,20 @@ export default class AboutProfile extends React.Component {
     }
   }
 
-  componentDidMount() {
-    timer = setInterval(() => {
-      if(this.props.weather.weatherData !== null) {
-        this.populate();
-        clearInterval(timer);
-      }
-    }, 500)
+  async componentDidMount() {
+    // timer = setInterval(() => {
+    //   if(this.props.weather.weatherData !== null) {
+    //     this.populate();
+    //     clearInterval(timer);
+    //   }
+    // }, 500)
+    const data = await this.props.weather.weatherData;
+    this.populate(data);
   }
 
-  componentWillUnmount() {
-    clearInterval(timer);
-  }
+  // componentWillUnmount() {
+  //   clearInterval(timer);
+  // }
 
 
   render() {
