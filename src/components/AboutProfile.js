@@ -2,25 +2,28 @@ import React from 'react';
 import profileWarm from '../../public/assets/profiles/profile-warm.png';
 import profileCold from '../../public/assets/profiles/profile-cold.png';
 
-let dataTimer;
+let timer;
 
 export default class AboutProfile extends React.Component {
   
-  state = {
-    temp: '??',
-    summary: '??',
-    profileURL: profileWarm,
-    profileBgColor: 'profile-bg-day', 
-    profileBg: 'profile-bg-sun'
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      temp: '??',
+      summary: '??',
+      profileURL: profileWarm,
+      profileBgColor: 'profile-bg-day', 
+      profileBg: 'profile-bg-sun',
+    };
+  }
 
   togglePhoto() {
     document.querySelector('.photo-box').classList.toggle('photo-hide');
   }
 
-  populate(data) {
+  populate() {
 
-    const weather = data;
+    const weather = this.props.weather.weatherData;
     const temperature = Math.round(weather.temp * 10) / 10;
     let profile = weather.temp > 65 ? profileWarm : profileCold;
     this.setState({profileURL: profile});
@@ -75,17 +78,16 @@ export default class AboutProfile extends React.Component {
   }
 
   componentWillUnmount() {
-    clearInterval(dataTimer);
+    clearInterval(timer);
   }
 
   componentDidMount() {
-    const data = this.props.weather.weatherData;
-    dataTimer = setInterval(() => {
-      if(data !== null) {
-        clearInterval(dataTimer);
-        this.populate(data);
-      } 
-    }, 500);
+    timer = setInterval(() => {
+      if(this.props.weather.weatherData !== null) {
+        this.populate();
+        clearInterval(timer);
+      }
+    }, 500)
   }
 
   render() {
