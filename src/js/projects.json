@@ -1,17 +1,17 @@
 [
   {
+    "img": "blowmind.jpg",
+    "title": "Blow Your Mind 2.0",
+    "url": "http://willhuanganimator.com/projects/blow-your-mind-react/",
+    "github": "https://github.com/huangrkul/blow-your-mind-react",
+    "desc": "Re-factored this project into react application.  The goal was to write the application using React hooks only (classless) and to utilize useContext / useReducer to simulate Redux's global state feature."
+  },
+  {
     "img": "portfolio2020.jpg",
     "title": "Portfolio 2020",
     "url": "",
     "github": "https://github.com/huangrkul/portfolio2020",
     "desc": "Current version of the portfolio uses React/Webpack for front-end server and Express for back-end API requests."
-  },
-  {
-    "img": "blowmind.jpg",
-    "title": "Blow Your Mind",
-    "url": "http://willhuanganimator.com/projects/blow-your-mind/",
-    "github": "https://github.com/huangrkul/blow-your-mind",
-    "desc": "This was a final group project for Code Fellows 201.  The challenge was to take everything we learned and create a web app in 4 days.  I was responsible for creating all art assets, CSS styling / animation, and core game mechanics."
   },
   {
     "img": "horns.jpg",

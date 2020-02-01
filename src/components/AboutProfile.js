@@ -2,7 +2,7 @@ import React from 'react';
 import profileWarm from '../../public/assets/profiles/profile-warm.png';
 import profileCold from '../../public/assets/profiles/profile-cold.png';
 
-// let timer;
+let dataTimer;
 
 export default class AboutProfile extends React.Component {
   
@@ -74,21 +74,19 @@ export default class AboutProfile extends React.Component {
     }
   }
 
-  async componentDidMount() {
-    // timer = setInterval(() => {
-    //   if(this.props.weather.weatherData !== null) {
-    //     this.populate();
-    //     clearInterval(timer);
-    //   }
-    // }, 500)
-    const data = await this.props.weather.weatherData;
-    this.populate(data);
+  componentWillUnmount() {
+    clearInterval(dataTimer);
   }
 
-  // componentWillUnmount() {
-  //   clearInterval(timer);
-  // }
-
+  componentDidMount() {
+    const data = this.props.weather.weatherData;
+    dataTimer = setInterval(() => {
+      if(data !== "null") {
+        clearInterval(dataTimer);
+        this.populate(data);
+      } 
+    }, 500);
+  }
 
   render() {
     let resume = "https://docs.google.com/document/d/1saDtEUnkRsreD38D4LsmqwNWBbCXTW76uXOyCpsFjhM/edit?usp=sharing";
