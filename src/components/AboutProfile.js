@@ -11,7 +11,7 @@ export default class AboutProfile extends React.Component {
     summary: '??',
     profileURL: profileWarm,
     profileBgColor: 'profile-bg-day', 
-    profileBg: 'profile-bg-sun',
+    profileBg: 'profile-bg-sun'
   };
 
   togglePhoto() {

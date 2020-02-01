@@ -66,7 +66,6 @@ export default class Banners extends React.Component {
 
   customHandler(e) {
     let customData = this.state.customsArray[e.target.value];
-    console.log(customData);
     this.setState({
       default: null,
       currentUnit: null,

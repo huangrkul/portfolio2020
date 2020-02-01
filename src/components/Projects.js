@@ -48,7 +48,6 @@ export default class Projects extends React.Component {
 
   render() {
     let projects = this.props.allProjects;
-    console.log(this.state.singleGit);
     return (
       <article className="projects-page">
         <h1 className="hide">WEB PROJECTS</h1>
