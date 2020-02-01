@@ -81,7 +81,7 @@ export default class AboutProfile extends React.Component {
   componentDidMount() {
     const data = this.props.weather.weatherData;
     dataTimer = setInterval(() => {
-      if(data !== "null") {
+      if(data !== null) {
         clearInterval(dataTimer);
         this.populate(data);
       } 
