@@ -1,5 +1,12 @@
 [
   {
+    "img": "svg-puzzle.jpg",
+    "title": "SVG Puzzle (Experimental)",
+    "url": "http://willhuanganimator.com/projects/svg-puzzle/",
+    "github": "https://github.com/huangrkul/puzzle-room",
+    "desc": "(SAFARI AND IOS not supported yet). This is a small puzzle that utilizes SVG animation.  The experiment is to test the extends of SVG and it's potential.  Currently still trying to solve Safari / IOS limitations"
+  },
+  {
     "img": "blowmind.jpg",
     "title": "Blow Your Mind 2.0",
     "url": "http://willhuanganimator.com/projects/blow-your-mind-react/",
@@ -35,9 +42,16 @@
     "desc": "This small app takes user inputs and displays the data as chart."
   },
   {
+    "img": "enmasse-devtest.jpg",
+    "title": "En Masse Dev Test",
+    "url": "http://willhuanganimator.com/projects/enmasse-devtest/",
+    "github": "https://github.com/huangrkul/fe-dev-test",
+    "desc": "A devtest to write the About Page from scratch with given image assets and basic instruction."
+  },
+  {
     "img": "kexp-clash.jpg",
     "title": "KEXP Clash Day 2019",
-    "url": "http://internationalclashday.com/",
+    "url": "http://willhuanganimator.com/projects/clash2019/",
     "github": null,
     "desc": "This is a single page application for client KEXP.  I was responsible for CSS layout and responsive styling."
   },

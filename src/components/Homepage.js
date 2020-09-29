@@ -49,6 +49,7 @@ export default class Homepage extends React.Component {
     setAni('.homepage ul li:nth-child(3)', 3200, 'section-enter');
     setAni('.homepage ul li:nth-child(4)', 3300, 'section-enter');
     setAni('.homepage ul li:nth-child(5)', 3400, 'section-enter');
+    setAni('h6', 4000, 'enter-bottom');
 
   }
 
@@ -85,6 +86,7 @@ export default class Homepage extends React.Component {
           <li className='hide' onClick={() => this.props.onNextPage('btnDemo')}>Demos</li>
           <li className='hide' onClick={() => this.props.onNextPage('btnContact')}>Contact</li>
         </ul>
+        <h6 className='hide'>(Last updated: 9/29/20) Copyright &copy; 2020 William Huang / huangrkul@gmail.com.  All Rights Reserved</h6>
       </article>
     )
   }

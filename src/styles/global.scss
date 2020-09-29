@@ -73,6 +73,7 @@ button {
   font-family: $title-font;
   cursor: pointer;
   transition: all 300ms ease;
+  outline: none;
 }
 
 button:hover {

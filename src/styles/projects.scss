@@ -7,7 +7,7 @@
 .projects-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .projects-list > div {
@@ -16,7 +16,7 @@
   background-color: $site-brown;
   border: 1em solid $site-brown;
   border-radius: 1em;
-  margin-bottom: 1.5em;
+  margin-bottom: 2em;
   cursor: pointer;
   transition: all 500ms ease;
 }
