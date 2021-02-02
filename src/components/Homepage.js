@@ -10,9 +10,9 @@ let titleTimer;
 
 const titleArray = [
   "Front-End Web Developer",
-  "2D/3D Animator",
-  "Banner Making Machine",
-  "Video Content Creator"
+  "Multimedia Developer",
+  "2D Animator",
+  "Banner Making Machine"
 ];
 
 export default class Homepage extends React.Component {
@@ -86,7 +86,7 @@ export default class Homepage extends React.Component {
           <li className='hide' onClick={() => this.props.onNextPage('btnDemo')}>Demos</li>
           <li className='hide' onClick={() => this.props.onNextPage('btnContact')}>Contact</li>
         </ul>
-        <h6 className='hide'>(Last updated: 9/29/20) Copyright &copy; 2020 William Huang / huangrkul@gmail.com.  All Rights Reserved</h6>
+        <h6 className='hide'>(Last updated: 1/15/21) Copyright &copy; 2021 William Huang / huangrkul@gmail.com.  All Rights Reserved</h6>
       </article>
     )
   }

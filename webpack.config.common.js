@@ -10,7 +10,7 @@ const htmlPlugin = new HtmlWebPackPlugin({
 });
 const cleanWebPack = new CleanWebpackPlugin();
 const miniCssWeb = new MiniCssExtractPlugin({
-  filename: '[name]-[hash].css',
+  filename: '[name].css',
   chunkFilename: '[id].css'
 });
 

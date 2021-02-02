@@ -1,5 +1,40 @@
 [
   {
+    "img": "taskapp.jpg",
+    "title": "Task App Demo",
+    "url": "http://willhuanganimator.com/projects/CreativeSoftwareChallenge/",
+    "github": "https://github.com/huangrkul/creative-software-challenge",
+    "desc": "React | Material-Ui (component and styling) | localstorage | React-datepicker"
+  },
+  {
+    "img": "enmasse-devtest.jpg",
+    "title": "En Masse Dev Test",
+    "url": "http://willhuanganimator.com/projects/enmasse-devtest/",
+    "github": "https://github.com/huangrkul/fe-dev-test",
+    "desc": "A devtest to write the About Page from scratch with given image assets and basic instruction."
+  },
+  {
+    "img": "kexp-clash.jpg",
+    "title": "KEXP Clash Day 2019",
+    "url": "http://willhuanganimator.com/projects/clash2019/",
+    "github": null,
+    "desc": "This is a single page application for client KEXP.  I was responsible for CSS layout and responsive styling."
+  },
+  {
+    "img": "kexp-report2017.jpg",
+    "title": "KEXP Annual Report 2017",
+    "url": "https://annualreport.kexp.org/2017/programming_highlights.html",
+    "github": null,
+    "desc": "Annual report site for client KEXP.  I was responsible for all styling and functionalities in programming highlight page."
+  },
+  {
+    "img": "publicis.jpg",
+    "title": "Publicis Website",
+    "url": "http://publicisseattle.com/",
+    "github": null,
+    "desc": "Wordpress customization and maintenance for my previous company website."
+  },
+  {
     "img": "svg-puzzle.jpg",
     "title": "SVG Puzzle (Experimental)",
     "url": "http://willhuanganimator.com/projects/svg-puzzle/",
@@ -40,34 +75,6 @@
     "url": "http://willhuanganimator.com/projects/bus-mall/",
     "github": "https://github.com/huangrkul/bus-mall",
     "desc": "This small app takes user inputs and displays the data as chart."
-  },
-  {
-    "img": "enmasse-devtest.jpg",
-    "title": "En Masse Dev Test",
-    "url": "http://willhuanganimator.com/projects/enmasse-devtest/",
-    "github": "https://github.com/huangrkul/fe-dev-test",
-    "desc": "A devtest to write the About Page from scratch with given image assets and basic instruction."
-  },
-  {
-    "img": "kexp-clash.jpg",
-    "title": "KEXP Clash Day 2019",
-    "url": "http://willhuanganimator.com/projects/clash2019/",
-    "github": null,
-    "desc": "This is a single page application for client KEXP.  I was responsible for CSS layout and responsive styling."
-  },
-  {
-    "img": "kexp-report2017.jpg",
-    "title": "KEXP Annual Report 2017",
-    "url": "https://annualreport.kexp.org/2017/programming_highlights.html",
-    "github": null,
-    "desc": "Annual report site for client KEXP.  I was responsible for all styling and functionalities in programming highlight page."
-  },
-  {
-    "img": "publicis.jpg",
-    "title": "Publicis Website",
-    "url": "http://publicisseattle.com/",
-    "github": null,
-    "desc": "Wordpress customization and maintenance for my previous company website."
   }
   
 ]

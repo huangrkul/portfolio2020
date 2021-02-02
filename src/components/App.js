@@ -31,11 +31,7 @@ export default class App extends React.Component {
 
   fetchWeatherData() {
     let weatherPath;
-    if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-      weatherPath = '/weather';
-    } else {
-      weatherPath = 'https://huangrkul-portfolio-backend.herokuapp.com/weather';
-    }
+    (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') ? weatherPath = '/weather' : weatherPath = 'https://huangrkul-portfolio-backend.herokuapp.com/weather';
 
     axios.get(weatherPath)
       .then(res => {
