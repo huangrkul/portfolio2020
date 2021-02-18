@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import Header from './Header';
 import Homepage from './Homepage';
@@ -8,7 +8,6 @@ import projectJson from '../js/projects';
 import Banners from './Banners';
 import Demo from './Demo';
 import Contact from './Contact';
-// import Footer from './Footer';
 
 const projectImgs = require.context ( '../../public/assets/projects', true, /\.jpg$/ );
 
@@ -20,71 +19,53 @@ function Project(project) {
   this.desc = project.desc;
 }
 
-export default class App extends React.Component {
-
-  state = {nextPage: null, weatherData: null, projectsArray: null};
-
-  componentDidMount() {
-    this.fetchWeatherData();
-    this.createProjectsArray();
+const App = (props) => {
+  
+  const viewComponents = {
+    index: () => <Homepage />,
+    btnAbout: () => <About weatherData={weatherData} />,
+    btnProjects: () => <Projects allProjects={projectsArray} />,
+    btnBanners: () => <Banners />,
+    btnDemo: () => <Demo />,
+    btnContact: () => <Contact />
   }
 
-  fetchWeatherData() {
-    let weatherPath;
-    (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') ? weatherPath = '/weather' : weatherPath = 'https://huangrkul-portfolio-backend.herokuapp.com/weather';
+  const [weatherData, setWeatherData] = useState(null);
+  const [projectsArray, setProjectsArray] = useState(null);
+  const [current, setCurrent] = useState(viewComponents.index());
+  const changePage = (page) => {setCurrent(viewComponents[page]());}
+
+  const fetchWeatherData = () => {
+    let weatherPath = (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') ? '/weather' : 'https://huangrkul-portfolio-backend.herokuapp.com/weather';
 
     axios.get(weatherPath)
-      .then(res => {
-        this.setState({weatherData: res.data})
-        console.log(this.state.weatherData);
-      })
+    .then(res => {
+      setWeatherData(res.data);
+    })
   }
 
-  createProjectsArray() {
+  const createProjectsArray = () => {
     let allProjects = projectJson.map((project) => {
       let projectItem = new Project(project);
       return projectItem;
     });
-    this.setState({projectsArray: allProjects});
-  }
-  
-  onNextPage = (selected) => {
-    this.setState({nextPage: selected});
-  };
-  
-  render() {
-    let pageToRender;
-    switch(this.state.nextPage) {
-      case 'index':
-        pageToRender = <Homepage onNextPage={this.onNextPage} />
-        break;
-      case 'btnAbout':
-        pageToRender = <About weatherData={this.state.weatherData} />
-        break;
-      case 'btnProjects':
-        pageToRender = <Projects allProjects={this.state.projectsArray} />
-        break;
-      case 'btnBanners':
-        pageToRender = <Banners />
-        break;
-      case 'btnDemo':
-        pageToRender = <Demo />
-        break;
-      case 'btnContact':
-        pageToRender = <Contact />
-        break;
-      default:
-        pageToRender = <Homepage onNextPage={this.onNextPage} />
-    }
 
-    return (
-      <div className="app">
-        <Header onNextPage={this.onNextPage} />
-        <main>
-          {pageToRender}
-        </main>
-        {/* <Footer /> */}
-      </div>
-    );
+    setProjectsArray(allProjects);
   }
+
+
+  useEffect(() => {
+    fetchWeatherData();
+  },[])
+
+  return (
+    <div className="app">
+      <Header changePage={changePage} />
+      <main>
+        {current}
+      </main>
+    </div>
+  )
 }
+
+export default App;
