@@ -1,115 +1,106 @@
-import React from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import profileWarm from '../../public/assets/profiles/profile-warm.png';
 import profileCold from '../../public/assets/profiles/profile-cold.png';
+import {store} from './store.js';
 
-let timer;
+const resume = "http://willhuanganimator.com/media/william-huang-resume.pdf";
 
-export default class AboutProfile extends React.Component {
-  
-  constructor(props) {
-    super(props);
-    this.state = {
-      temp: '??',
-      summary: '??',
-      profileURL: profileWarm,
-      profileBgColor: 'profile-bg-day', 
-      profileBg: 'profile-bg-sun',
-    };
-  }
+const AboutProfile = (props) => {
+  const globalState = useContext(store);
+  const [temp, setTemp] = useState('??');
+  const [summary, setSummary] = useState('??');
+  const [profileURL, setProfileURL] = useState(profileWarm);
+  const [profileBgColor, setProfileBgColor] = useState('profile-bg-day');
+  const [profileBg, setProfileBg] = useState('profile-bg-sun');
 
-  togglePhoto() {
+  const togglePhoto = () => {
     document.querySelector('.photo-box').classList.toggle('photo-hide');
   }
 
-  populate() {
+  const populate = weatherData => {
+    const temperature = Math.round(weatherData.temp * 10) / 10;
+    const profile = weatherData.temp > 65 ? profileWarm : profileCold;
+    setProfileURL(profile);
+    setTemp(temperature);
+    setSummary(weatherData.summary);
 
-    const weather = this.props.weather.weatherData;
-    const temperature = Math.round(weather.temp * 10) / 10;
-    let profile = weather.temp > 65 ? profileWarm : profileCold;
-    this.setState({profileURL: profile});
-    this.setState({temp: temperature});
-    this.setState({summary: weather.summary});
-
-    switch(weather.bg){
+    switch(weatherData.bg){
       case 'clear-day':
-        this.setState({profileBgColor: 'profile-bg-day'});
-        this.setState({profileBg: 'profile-bg-sun'});
+        setProfileBgColor('profile-bg-day');
+        setProfileBg('profile-bg-sun');
         break;
       case 'clear-night':
-        this.setState({profileBgColor: 'profile-bg-night'});
-        this.setState({profileBg: 'profile-bg-moon'});
+        setProfileBgColor('profile-bg-night');
+        setProfileBg('profile-bg-moon');
         break;
       case 'rain':
-        this.setState({profileBgColor: 'profile-bg-dark'});
-        this.setState({profileBg: 'profile-bg-rain'});
+        setProfileBgColor('profile-bg-dark');
+        setProfileBg('profile-bg-rain');
         break;
       case 'snow':
-        this.setState({profileBgColor: 'profile-bg-gray'});
-        this.setState({profileBg: 'profile-bg-snow'});
+        setProfileBgColor('profile-bg-gray');
+        setProfileBg('profile-bg-snow');
         break;
       case 'sleet':
-        this.setState({profileBgColor: 'profile-bg-gray'});
-        this.setState({profileBg: 'profile-bg-snow'});
+        setProfileBgColor('profile-bg-gray');
+        setProfileBg('profile-bg-snow');
         break;
       case 'wind':
-        this.setState({profileBgColor: 'profile-bg-dark'});
-        this.setState({profileBg: 'profile-bg-cloudy'});
+        setProfileBgColor('profile-bg-dark');
+        setProfileBg('profile-bg-cloudy');
         break;
       case 'fog':
-        this.setState({profileBgColor: 'profile-bg-dark'});
-        this.setState({profileBg: 'profile-bg-cloudy'});
+        setProfileBgColor('profile-bg-dark');
+        setProfileBg('profile-bg-cloudy');
         break;
       case 'cloudy':
-        this.setState({profileBgColor: 'profile-bg-dark'});
-        this.setState({profileBg: 'profile-bg-cloudy'});
+        setProfileBgColor('profile-bg-dark');
+        setProfileBg('profile-bg-cloudy');
         break;
       case 'partly-cloudy-day':
-        this.setState({profileBgColor: 'profile-bg-gray'});
-        this.setState({profileBg: 'profile-bg-sun-cloudy'});
+        setProfileBgColor('profile-bg-gray');
+        setProfileBg('profile-bg-sun-cloudy');
         break;
       case 'partly-cloudy-night':
-        this.setState({profileBgColor: 'profile-bg-night'});
-        this.setState({profileBg: 'profile-bg-moon-cloudy'});
+        setProfileBgColor('profile-bg-night');
+        setProfileBg('profile-bg-moon-cloudy');
         break;
       default:
-        this.setState({profileBgColor: 'profile-bg-day'});
-        this.setState({profileBg: 'profile-bg-sun'});
+        setProfileBgColor('profile-bg-day');
+        setProfileBg('profile-bg-sun');
     }
   }
 
-  componentWillUnmount() {
-    clearInterval(timer);
-  }
-
-  componentDidMount() {
-    timer = setInterval(() => {
-      if(this.props.weather.weatherData !== null) {
-        this.populate();
+  useEffect(() => {
+    let timer = setInterval(() => {
+      if(globalState.state.weather !== null) {
+        populate(globalState.state.weather);
         clearInterval(timer);
       }
     }, 500)
-  }
+    return(() => {
+      clearInterval(timer);
+    })
+  },[]) 
 
-  render() {
-    let resume = "http://willhuanganimator.com/media/william-huang-resume.pdf";
-
-    return (
-      <section className="profile-section hide">
-        <div className={`${this.state.profileBgColor} ${this.state.profileBg}`}>
-          <img className="profile-image" src={this.state.profileURL} />
-        </div>
-        <ul>
-          <li>Seattle<br/><span>({this.state.summary})</span></li>
-          <li><button onClick={() => this.togglePhoto()}>Photo</button></li>
-          <li>{this.state.temp}&#176;F</li>
-          <li><a href={resume} target="_blank"><button>Resume</button></a></li>
-        </ul>
-        <div className="photo-box photo-hide">
-          <button onClick={() => this.togglePhoto()} className="title-font photo-close">X</button>
-        </div>
-      </section>
-    )
-  }
+  return (
+    <section className="profile-section hide">
+      <div className={`${profileBgColor} ${profileBg}`}>
+        <img className="profile-image" src={profileURL} />
+      </div>
+      <ul>
+        <li>Seattle<br/><span>({summary})</span></li>
+        <li><button onClick={() => togglePhoto()}>Photo</button></li>
+        <li>{temp}&#176;F</li>
+        <li><a href={resume} target="_blank"><button>Resume</button></a></li>
+      </ul>
+      <div className="photo-box photo-hide">
+        <button onClick={() => togglePhoto()} className="title-font photo-close">X</button>
+      </div>
+    </section>
+  )
 
 }
+
+export default AboutProfile;
 

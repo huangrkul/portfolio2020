@@ -1,13 +1,14 @@
-import React, {useState, useEffect} from 'react';
-import axios from 'axios';
+import React, {useState, useEffect, useContext} from 'react';
 import Header from './Header';
 import Homepage from './Homepage';
 import About from './About';
 import Projects from './Projects';
-import projectJson from '../js/projects';
 import Banners from './Banners';
 import Demo from './Demo';
 import Contact from './Contact';
+import {store} from './store.js';
+import projectJson from '../js/projects';
+import axios from 'axios';
 
 const projectImgs = require.context ( '../../public/assets/projects', true, /\.jpg$/ );
 
@@ -19,42 +20,42 @@ function Project(project) {
   this.desc = project.desc;
 }
 
-const App = (props) => {
-  
+const App = () => {
+
+  const changePage = (page) => {setCurrent(viewComponents[page]());}
+
   const viewComponents = {
-    index: () => <Homepage />,
-    btnAbout: () => <About weatherData={weatherData} />,
-    btnProjects: () => <Projects allProjects={projectsArray} />,
+    index: () => <Homepage changePage={changePage} />,
+    btnAbout: () => <About />,
+    btnProjects: () => <Projects />,
     btnBanners: () => <Banners />,
     btnDemo: () => <Demo />,
     btnContact: () => <Contact />
   }
 
-  const [weatherData, setWeatherData] = useState(null);
-  const [projectsArray, setProjectsArray] = useState(null);
+  const globalState = useContext(store);
+  const {dispatch} = globalState;
   const [current, setCurrent] = useState(viewComponents.index());
-  const changePage = (page) => {setCurrent(viewComponents[page]());}
+
+  const createProjectsArray = () => {
+    const allProjects = projectJson.map((project) => {
+      let projectItem = new Project(project);
+      return projectItem;
+    });
+    dispatch({type: 'projects', payload: allProjects});
+  }
 
   const fetchWeatherData = () => {
     let weatherPath = (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') ? '/weather' : 'https://huangrkul-portfolio-backend.herokuapp.com/weather';
 
     axios.get(weatherPath)
     .then(res => {
-      setWeatherData(res.data);
+      dispatch({type: 'weather', payload: res.data});
     })
   }
 
-  const createProjectsArray = () => {
-    let allProjects = projectJson.map((project) => {
-      let projectItem = new Project(project);
-      return projectItem;
-    });
-
-    setProjectsArray(allProjects);
-  }
-
-
   useEffect(() => {
+    createProjectsArray();
     fetchWeatherData();
   },[])
 
