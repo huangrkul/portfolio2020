@@ -1,25 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-export default class HeaderBtn extends React.Component {
-  
-  state = {hovering: false};
+const HeaderBtn = (props) => {
 
-  handleOver = () => {
-    this.setState({hovering: true})
-  }
+  const [hovering, setHovering] = useState(false);
 
-  handleOut = () => {
-    this.setState({hovering: false})
-  }
+  return (
+    <div
+        className={`${props.buttonId} ${props.buttonId}-${hovering ? 'hover' : 'out'}`}
+        onMouseOver={() => setHovering(true)}
+        onMouseOut={() => setHovering(false)}
+    />
+  )
 
-  render() {
-    const btnId = this.props.buttonId;
-    return (
-        <div
-            className={`${btnId} ${btnId}-${this.state.hovering ? 'hover' : 'out'}`}
-            onMouseOver={this.handleOver}
-            onMouseOut={this.handleOut}
-        />
-    )
-  }
 }
+
+export default HeaderBtn;

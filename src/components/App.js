@@ -1,14 +1,14 @@
-import React from 'react';
-import axios from 'axios';
+import React, {useState, useEffect, useContext} from 'react';
 import Header from './Header';
 import Homepage from './Homepage';
 import About from './About';
 import Projects from './Projects';
-import projectJson from '../js/projects';
 import Banners from './Banners';
 import Demo from './Demo';
 import Contact from './Contact';
-// import Footer from './Footer';
+import {store} from './store.js';
+import projectJson from '../js/projects';
+import axios from 'axios';
 
 const projectImgs = require.context ( '../../public/assets/projects', true, /\.jpg$/ );
 
@@ -20,71 +20,53 @@ function Project(project) {
   this.desc = project.desc;
 }
 
-export default class App extends React.Component {
+const App = () => {
 
-  state = {nextPage: null, weatherData: null, projectsArray: null};
+  const changePage = (page) => {setCurrent(viewComponents[page]());}
 
-  componentDidMount() {
-    this.fetchWeatherData();
-    this.createProjectsArray();
+  const viewComponents = {
+    index: () => <Homepage changePage={changePage} />,
+    btnAbout: () => <About />,
+    btnProjects: () => <Projects />,
+    btnBanners: () => <Banners />,
+    btnDemo: () => <Demo />,
+    btnContact: () => <Contact />
   }
 
-  fetchWeatherData() {
-    let weatherPath;
-    (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') ? weatherPath = '/weather' : weatherPath = 'https://huangrkul-portfolio-backend.herokuapp.com/weather';
+  const globalState = useContext(store);
+  const {dispatch} = globalState;
+  const [current, setCurrent] = useState(viewComponents.index());
 
-    axios.get(weatherPath)
-      .then(res => {
-        this.setState({weatherData: res.data})
-        console.log(this.state.weatherData);
-      })
-  }
-
-  createProjectsArray() {
-    let allProjects = projectJson.map((project) => {
+  const createProjectsArray = () => {
+    const allProjects = projectJson.map((project) => {
       let projectItem = new Project(project);
       return projectItem;
     });
-    this.setState({projectsArray: allProjects});
+    dispatch({type: 'projects', payload: allProjects});
   }
-  
-  onNextPage = (selected) => {
-    this.setState({nextPage: selected});
-  };
-  
-  render() {
-    let pageToRender;
-    switch(this.state.nextPage) {
-      case 'index':
-        pageToRender = <Homepage onNextPage={this.onNextPage} />
-        break;
-      case 'btnAbout':
-        pageToRender = <About weatherData={this.state.weatherData} />
-        break;
-      case 'btnProjects':
-        pageToRender = <Projects allProjects={this.state.projectsArray} />
-        break;
-      case 'btnBanners':
-        pageToRender = <Banners />
-        break;
-      case 'btnDemo':
-        pageToRender = <Demo />
-        break;
-      case 'btnContact':
-        pageToRender = <Contact />
-        break;
-      default:
-        pageToRender = <Homepage onNextPage={this.onNextPage} />
-    }
 
-    return (
-      <div className="app">
-        <Header onNextPage={this.onNextPage} />
-        <main>
-          {pageToRender}
-        </main>
-        {/* <Footer /> */}
-      </div>
-    );
+  const fetchWeatherData = () => {
+    let weatherPath = (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') ? '/weather' : 'https://huangrkul-portfolio-backend.herokuapp.com/weather';
+
+    axios.get(weatherPath)
+    .then(res => {
+      dispatch({type: 'weather', payload: res.data});
+    })
   }
+
+  useEffect(() => {
+    createProjectsArray();
+    fetchWeatherData();
+  },[])
+
+  return (
+    <div className="app">
+      <Header changePage={changePage} />
+      <main>
+        {current}
+      </main>
+    </div>
+  )
 }
+
+export default App;
