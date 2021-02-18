@@ -2,7 +2,7 @@
 
 **Author**: Will Huang
 
-**Version**: 1.0.0
+**Version**: 1.1.0
 
 **Backend Server Git**: https://github.com/huangrkul/portfolio2020_server
 
@@ -20,6 +20,11 @@ My Portfolio that encompasses a selection of my work from the past several years
 - tools: React, React-Dom, Babel, Webpack, Node, SASS/SCSS
 
 ## Change Log
+
+==1.1.0==
+- Refactored code on all components to use React hook
+- Added globalstate handling for async data fetching
+- general clean up
 
 ==1.0.0==
 - Project completed and deployed
