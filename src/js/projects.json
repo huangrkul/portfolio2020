@@ -7,6 +7,13 @@
     "desc": "React | Material-Ui (component and styling) | localstorage | React-datepicker"
   },
   {
+    "img": "portfolio2020.jpg",
+    "title": "Portfolio 2020",
+    "url": "",
+    "github": "https://github.com/huangrkul/portfolio2020",
+    "desc": "Current version of the portfolio uses React/Webpack for front-end server and Express for back-end API requests."
+  },
+  {
     "img": "enmasse-devtest.jpg",
     "title": "En Masse Dev Test",
     "url": "http://willhuanganimator.com/projects/enmasse-devtest/",
@@ -47,13 +54,6 @@
     "url": "http://willhuanganimator.com/projects/blow-your-mind-react/",
     "github": "https://github.com/huangrkul/blow-your-mind-react",
     "desc": "Re-factored this project into react application.  The goal was to write the application using React hooks only (classless) and to utilize useContext / useReducer to simulate Redux's global state feature."
-  },
-  {
-    "img": "portfolio2020.jpg",
-    "title": "Portfolio 2020",
-    "url": "",
-    "github": "https://github.com/huangrkul/portfolio2020",
-    "desc": "Current version of the portfolio uses React/Webpack for front-end server and Express for back-end API requests."
   },
   {
     "img": "horns.jpg",
