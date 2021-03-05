@@ -1,7 +1,7 @@
 import React, {createContext, useReducer} from 'react';
 
 const initialState = {
-  weather: {},
+  weather: null,
   projects: []
 };
 

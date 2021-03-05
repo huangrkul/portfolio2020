@@ -81,7 +81,7 @@ const AboutProfile = (props) => {
     return(() => {
       clearInterval(timer);
     })
-  },[]) 
+  },[globalState.state.weather]) 
 
   return (
     <section className="profile-section hide">
