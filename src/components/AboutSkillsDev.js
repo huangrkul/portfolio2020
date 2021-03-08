@@ -29,7 +29,7 @@ const AboutSkillsDev = (props) => {
         })}
       </h3>
       <p><span className="bold blk">LANGUAGES:</span><br/> HTML | CSS | Javascript (+ES6)</p>
-      <p><span className="bold blk">LIBRARIES / TOOLS:</span><br/>  SASS/SCSS | React | Webpack | Gulp | Express | Axios | Handlebar | Node | VSCode | Sublime | Atom | Postgres | Heroku</p>  
+      <p><span className="bold blk">LIBRARIES / TOOLS:</span><br/>  React + Hook | Material Ui | React-JSS / SASS / SCSS | Webpack | Gulp | Express | Axios | VSCode | Sublime | Atom | Postgres | Heroku</p>  
 
       <h3>
         {[...'WORKING KNOWLEDGE'].map((char, idx) => {
