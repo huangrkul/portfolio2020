@@ -10,7 +10,6 @@ import {store} from './store.js';
 import projectJson from '../js/projects';
 import axios from 'axios';
 
-const projectImgs = require.context ( '../../public/assets/projects', true, /\.jpg$/ );
 
 function Project(project) {
   this.img = `./public/assets/projects/${project.img}`;
@@ -45,13 +44,18 @@ const App = () => {
     dispatch({type: 'projects', payload: allProjects});
   }
 
-  const fetchWeatherData = () => {
+  const fetchWeatherData = async () => {
     let weatherPath = (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') ? '/weather' : 'https://huangrkul-portfolio-backend.herokuapp.com/weather';
+    try{
+      await axios.get(weatherPath)
+      .then(res => {
+        dispatch({type: 'weather', payload: res.data});
+        console.log('weather updated');
+      })
+    } catch(error) {
+      console.log('error', error);
+    }
 
-    axios.get(weatherPath)
-    .then(res => {
-      dispatch({type: 'weather', payload: res.data});
-    })
   }
 
   useEffect(() => {

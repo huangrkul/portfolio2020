@@ -8,7 +8,7 @@ const resume = "http://willhuanganimator.com/media/william-huang-resume.pdf";
 const AboutProfile = (props) => {
   const globalState = useContext(store);
   const [temp, setTemp] = useState('??');
-  const [summary, setSummary] = useState('??');
+  const [summary, setSummary] = useState('LOADING...');
   const [profileURL, setProfileURL] = useState(profileWarm);
   const [profileBgColor, setProfileBgColor] = useState('profile-bg-day');
   const [profileBg, setProfileBg] = useState('profile-bg-sun');
@@ -72,15 +72,9 @@ const AboutProfile = (props) => {
   }
 
   useEffect(() => {
-    let timer = setInterval(() => {
-      if(globalState.state.weather !== null) {
-        populate(globalState.state.weather);
-        clearInterval(timer);
-      }
-    }, 500)
-    return(() => {
-      clearInterval(timer);
-    })
+    if(globalState.state.weather !== null){
+      populate(globalState.state.weather);
+    }
   },[globalState.state.weather]) 
 
   return (
@@ -90,12 +84,12 @@ const AboutProfile = (props) => {
       </div>
       <ul>
         <li>Seattle<br/><span>({summary})</span></li>
-        <li><button onClick={() => togglePhoto()}>Photo</button></li>
+        <li><button data-testid='photo-button' onClick={() => togglePhoto()}>Photo</button></li>
         <li>{temp}&#176;F</li>
         <li><a href={resume} target="_blank"><button>Resume</button></a></li>
       </ul>
       <div className="photo-box photo-hide">
-        <button onClick={() => togglePhoto()} className="title-font photo-close">X</button>
+        <button data-testid='photo-button-exit' onClick={() => togglePhoto()} className="title-font photo-close">X</button>
       </div>
     </section>
   )
