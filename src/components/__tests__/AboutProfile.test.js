@@ -33,11 +33,18 @@ it('button click toggles visibility class', () => {
   expect(button1.innerHTML).toBe('Photo');
   const button2 = document.querySelector("[data-testid=photo-button-exit]");
   expect(button2.innerHTML).toBe('X');
+  const photobox = document.querySelector("[data-testid=photobox]");
+  expect(photobox.classList.contains('photo-hide')).toBe(true);
 
   act(() => {
     button1.dispatchEvent(new MouseEvent('click', {bubbles: true}));
   });
 
-  expect(button1.classList.contains('photo-hide'));
+  expect(photobox.classList.contains('photo-hide')).toBe(false);
 
+  act(() => {
+    button2.dispatchEvent(new MouseEvent('click', {bubbles: true}));
+  });
+
+  expect(photobox.classList.contains('photo-hide')).toBe(true);
 })

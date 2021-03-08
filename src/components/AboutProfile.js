@@ -88,7 +88,7 @@ const AboutProfile = (props) => {
         <li>{temp}&#176;F</li>
         <li><a href={resume} target="_blank"><button>Resume</button></a></li>
       </ul>
-      <div className="photo-box photo-hide">
+      <div data-testid='photobox' className="photo-box photo-hide">
         <button data-testid='photo-button-exit' onClick={() => togglePhoto()} className="title-font photo-close">X</button>
       </div>
     </section>
