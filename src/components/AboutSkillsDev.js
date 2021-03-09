@@ -20,7 +20,7 @@ const AboutSkillsDev = (props) => {
   },[])
 
   return (
-    <section className="skills-dev-section hide">
+    <section data-testid='dev-component' className="skills-dev-section hide">
       <h3>
         {[...'EXPERT KNOWLEDGE'].map((char, idx) => {
           return(

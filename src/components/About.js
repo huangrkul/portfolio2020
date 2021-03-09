@@ -35,8 +35,8 @@ const About = (props) => {
         <div>
           <section className="skills-section hide">
             <div>
-              <h2 onClick={() => switchSkill('dev')} className={`dev-tab title-font ${tab === 'dev' ? 'active-tab' : ''}`}>Developer</h2>
-              <h2 onClick={() => switchSkill('ani')} className={`ani-tab title-font ${tab === 'dev' ? '' : 'active-tab'}`}>Animator</h2>
+              <h2 data-testid='dev-button' onClick={() => switchSkill('dev')} className={`dev-tab title-font ${tab === 'dev' ? 'active-tab' : ''}`}>Developer</h2>
+              <h2 data-testid='ani-button' onClick={() => switchSkill('ani')} className={`ani-tab title-font ${tab === 'dev' ? '' : 'active-tab'}`}>Animator</h2>
             </div>
             <div>
               {skills}

@@ -22,7 +22,7 @@ const AboutSkillsAni = (props) => {
   },[])
 
   return (
-    <section className="skills-ani-section hide">
+    <section data-testid='ani-component' className="skills-ani-section hide">
       <h3>
         {[...'EXPERIENCE AND EDUCATION'].map((char, idx) => {
           return(
