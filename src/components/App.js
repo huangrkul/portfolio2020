@@ -9,6 +9,7 @@ import Contact from './Contact';
 import {store} from './store.js';
 import projectJson from '../js/projects';
 import axios from 'axios';
+import regeneratorRuntime from "regenerator-runtime";
 
 
 function Project(project) {
@@ -50,12 +51,10 @@ const App = () => {
       await axios.get(weatherPath)
       .then(res => {
         dispatch({type: 'weather', payload: res.data});
-        console.log('weather updated');
       })
     } catch(error) {
-      console.log('error', error);
+      console.error(error);
     }
-
   }
 
   useEffect(() => {

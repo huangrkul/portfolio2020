@@ -2,7 +2,8 @@ import React, {useState, useEffect} from 'react';
 import AboutSkillsDev from './AboutSkillsDev';
 import AboutSkillsAni from './AboutSkillsAni';
 import AboutProfile from './AboutProfile';
-import { setAni } from '../js/snippets';
+import { setAni, setClass } from '../js/snippets';
+
 
 const About = (props) => {
 
