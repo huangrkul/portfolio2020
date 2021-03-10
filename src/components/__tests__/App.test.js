@@ -2,7 +2,7 @@ import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
 import { act } from 'react-dom/test-utils';
 import App from '../App';
-import { StateProvider } from '../store';
+import { StateProvider, store } from '../store';
 import axios from 'axios';
 import regeneratorRuntime from "regenerator-runtime";
 
@@ -34,4 +34,7 @@ it('renders without crashing', async () => {
   await act(async () => {
     render(<StateProvider><App /></StateProvider>, container);
   });
+
+  axios.get.mockRestore();  
 });
+
