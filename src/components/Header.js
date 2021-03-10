@@ -30,7 +30,7 @@ const Header = (props) => {
           )
         })}
       </ul>
-  </header>
+    </header>
   )
 }
 

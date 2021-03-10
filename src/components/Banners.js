@@ -92,7 +92,7 @@ const Banners = (props) => {
         <section>
           <div className="hide">
             <label htmlFor="standards">Standards:</label>
-            <select id="standards" onChange={(event) => bannerHandler(event)}>
+            <select data-testid="banner-select" id="standards" onChange={(event) => bannerHandler(event)}>
               <option value="">Choose a campaign</option>
               {bannersArray.map((banner, idx) => {
                 return (

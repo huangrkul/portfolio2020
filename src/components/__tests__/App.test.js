@@ -21,11 +21,7 @@ afterEach(() => {
 });
 
 it('renders without crashing', async () => {
-  const data = {
-    bg: "partly-cloudy-day",
-    summary: "Mostly Cloudy",
-    temp: 47.79
-  };
+  const data = {};
 
   jest.spyOn(axios, 'get').mockImplementation(() => Promise.resolve({
     json: () => Promise.resolve(data)
