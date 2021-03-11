@@ -115,7 +115,7 @@ const Banners = (props) => {
         </section>
         <section>
           <div className="heading">
-            <h2 className="title-font">{unit.title}</h2>
+            <h2 data-testid="option-title" className="title-font">{unit.title}</h2>
             <aside>
               {unit.sizes.map((size, idx) => {
                 return(

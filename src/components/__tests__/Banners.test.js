@@ -9,7 +9,7 @@ import {
   fireEvent, 
   toBeInTheDocument ,
 } from '@testing-library/react';
-import selectEvent from 'react-select-event'
+import userEvent from "@testing-library/user-event";
 
 let container = null;
 beforeEach(() => {
@@ -38,7 +38,11 @@ it('simulate dropdown list', () => {
 
   const bannerSelect = screen.getByTestId('banner-select');
   const allBannerOptions = bannerSelect.querySelectorAll('option');
+  const optionTitle = screen.getByTestId('option-title');
 
   expect(allBannerOptions[0].innerHTML).toBe('Choose a campaign');
+
+  userEvent.selectOptions(bannerSelect,'T-Mobile - Holiday 2018');
+  expect(optionTitle.innerHTML).toBe('T-Mobile - Holiday 2018');
 
 });
