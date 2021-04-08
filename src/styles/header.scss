@@ -43,38 +43,48 @@ header ul li {
   cursor: pointer;
 }
 
+header ul li button,
+header ul li button:hover {
+  border: none;
+  background-color: transparent;
+}
+
 .btn-init {
   opacity: 0;
 }
 
-.btnAbout, .btnProjects, .btnBanners, .btnDemo, .btnContact {
+.btnAbout,
+.btnProjects,
+.btnBanners,
+.btnDemo,
+.btnContact {
   margin: auto;
   width: 3vw;
   height: 3vw;
 }
 
 .btnAbout {
-  background-image: url('../../public/assets/btn-sprites/btn-about.png');
+  background-image: url("../../public/assets/btn-sprites/btn-about.png");
   background-size: 2100%;
 }
 
 .btnProjects {
-  background-image: url('../../public/assets/btn-sprites/btn-project.png');
+  background-image: url("../../public/assets/btn-sprites/btn-project.png");
   background-size: 1000%;
 }
 
 .btnBanners {
-  background-image: url('../../public/assets/btn-sprites/btn-banner.png');
+  background-image: url("../../public/assets/btn-sprites/btn-banner.png");
   background-size: 3000%;
 }
 
 .btnDemo {
-  background-image: url('../../public/assets/btn-sprites/btn-demo.png');
+  background-image: url("../../public/assets/btn-sprites/btn-demo.png");
   background-size: 1900%;
 }
 
 .btnContact {
-  background-image: url('../../public/assets/btn-sprites/btn-contact.png');
+  background-image: url("../../public/assets/btn-sprites/btn-contact.png");
   background-size: 2000%;
 }
 
@@ -82,7 +92,11 @@ header ul li {
   header div:first-child {
     font-size: 4vw;
   }
-  .btnAbout, .btnProjects, .btnBanners, .btnDemo, .btnContact {
+  .btnAbout,
+  .btnProjects,
+  .btnBanners,
+  .btnDemo,
+  .btnContact {
     width: 4vw;
     height: 4vw;
   }
@@ -92,7 +106,11 @@ header ul li {
   header div:first-child {
     font-size: 5vw;
   }
-  .btnAbout, .btnProjects, .btnBanners, .btnDemo, .btnContact {
+  .btnAbout,
+  .btnProjects,
+  .btnBanners,
+  .btnDemo,
+  .btnContact {
     width: 5vw;
     height: 5vw;
   }
@@ -102,12 +120,15 @@ header ul li {
   header div:first-child {
     font-size: 6vw;
   }
-  .btnAbout, .btnProjects, .btnBanners, .btnDemo, .btnContact {
+  .btnAbout,
+  .btnProjects,
+  .btnBanners,
+  .btnDemo,
+  .btnContact {
     width: 6vw;
     height: 6vw;
   }
 }
-
 
 // init animations /////////////////////////////////////
 .btn-show {
