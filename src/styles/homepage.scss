@@ -8,7 +8,8 @@
   flex-wrap: wrap;
 }
 
-.logo-title > div:first-child, .logo-title > div:last-child {
+.logo-title > div:first-child,
+.logo-title > div:last-child {
   flex: 0 0 50%;
 }
 
@@ -21,7 +22,7 @@
   display: flex;
   justify-content: space-around;
   text-align: center;
-  margin-top: 8vw;
+  margin-top: 6vw;
   background-color: $site-brown-drk;
   border: 1em solid $site-brown-drk;
   border-radius: 1em;
@@ -44,7 +45,8 @@
   color: $site-black;
 }
 
-.logo-container, .title-container {
+.logo-container,
+.title-container {
   position: relative;
 }
 
@@ -57,14 +59,15 @@
   top: 16%;
 }
 
-.logo-container img, .title-container div:nth-child(2) img {
+.logo-container img,
+.title-container div:nth-child(2) img {
   position: absolute;
   width: 100%;
 }
 
 .title-container div:first-child {
   height: 6vw;
-  background-image: url('../../public/assets/homepage/title-will.png');
+  background-image: url("../../public/assets/homepage/title-will.png");
   background-size: 100% 3000%;
 }
 
@@ -91,10 +94,11 @@
   .homepage {
     margin: 14em auto;
   }
-  .logo-title > div:first-child, .logo-title > div:last-child {
+  .logo-title > div:first-child,
+  .logo-title > div:last-child {
     flex: 0 1 100%;
   }
-  .logo-title > div:first-child{
+  .logo-title > div:first-child {
     height: 50vw;
   }
   .title-container {
@@ -116,9 +120,9 @@
   .homepage ul {
     flex-wrap: wrap;
     width: 60%;
-    margin: 10vw auto
+    margin: 10vw auto;
   }
-  
+
   .homepage ul li {
     font-size: 3vw;
     font-family: $title-font;

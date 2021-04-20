@@ -2,35 +2,31 @@
   width: 80%;
 }
 
-.demos-content {
-  margin-top: 4vw;
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  justify-content: space-around;
-
-}
-
 .demos-content > section {
-  flex: 0 0 40%;
-  height: 24vw;
+  margin: 0 auto 4vw auto;
+  max-width: 700px;
+  max-height: 400px;
   background-color: $site-brown-drk;
   border: 1em solid $site-brown-drk;
   border-radius: 1em;
   overflow: hidden;
+  text-align: center;
+  video {
+    outline: 0;
+    max-width: 640px;
+    max-height: 360px;
+  }
 }
 
 @media (max-width: 1200px) {
   .demos-content > section {
-    flex: 0 0 80%;
-    height: 35vw;
     margin-bottom: 5vw;
+    height: 45vw;
   }
 }
 
 @media (max-width: 768px) {
   .demos-content > section {
-    height: 50vw;
     margin-bottom: 5vw;
   }
 }
